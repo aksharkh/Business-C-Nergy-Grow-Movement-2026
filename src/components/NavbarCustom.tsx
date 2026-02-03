@@ -27,19 +27,19 @@ const NavbarCustom = ({ scrollY = 0 }: NavbarProps) => {
             {/* Logo */}
             <div
               className={`
-              flex items-center justify-center font-serif font-bold rounded-full transition-all duration-500 shadow-lg shadow-blue-500/30
-              ${scrollY > 50 ? 'w-10 h-10 text-xl bg-[#0F52BA] text-white' : 'w-12 h-12 text-2xl bg-[#0F52BA] text-white'}
-              group-hover:bg-[#020617] group-hover:text-[#0F52BA]
+              flex items-center justify-center font-serif font-bold rounded-full transition-all duration-500 shadow-lg shadow-purple-500/30
+              ${scrollY > 50 ? 'w-10 h-10 text-xl bg-[#6B2D8C] text-white' : 'w-12 h-12 text-2xl bg-[#6B2D8C] text-white'}
+              group-hover:bg-[#2D1B3D] group-hover:text-[#D4AF37]
             `}
             >
               C
             </div>
             <div className="hidden md:block leading-tight">
-              <div className="text-xs font-bold tracking-[0.25em] uppercase text-[#020617] group-hover:text-[#0F52BA] transition-colors">
+              <div className="text-xs font-bold tracking-[0.25em] uppercase text-[#2D1B3D] group-hover:text-[#6B2D8C] transition-colors">
                 Business C-Nergy
               </div>
               {scrollY < 50 && (
-                <div className="text-[10px] text-[#0F52BA] tracking-widest uppercase group-hover:text-[#020617] transition-colors">
+                <div className="text-[10px] text-[#6B2D8C] tracking-widest uppercase group-hover:text-[#2D1B3D] transition-colors">
                   Movement 2026
                 </div>
               )}
@@ -48,29 +48,29 @@ const NavbarCustom = ({ scrollY = 0 }: NavbarProps) => {
 
           <div className="hidden lg:flex items-center gap-8">
             <div className={`flex items-center gap-8 ${scrollY > 50 ? 'hidden md:flex' : ''}`}>
-              {navLinks.map((item, i) => (
+                {navLinks.map((item, i) => (
                 <a
-                  key={item.label}
-                  href={item.href}
-                  className={`text-xs font-bold uppercase tracking-[0.2em] transition-colors relative group py-2 ${scrollY > 50 ? 'text-[#020617]' : 'text-[#020617] hover:text-[#0F52BA]'}`}
-                  style={{ transitionDelay: `${i * 100}ms` }}
+                    key={item.label}
+                    href={item.href}
+                    className={`text-xs font-bold uppercase tracking-[0.2em] transition-colors relative group py-2 ${scrollY > 50 ? 'text-[#2D1B3D]' : 'text-[#2D1B3D] hover:text-[#6B2D8C]'}`}
+                    style={{ transitionDelay: `${i * 100}ms` }}
                 >
-                  {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#0F52BA] transition-all duration-300 group-hover:w-full"></span>
+                    {item.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#6B2D8C] transition-all duration-300 group-hover:w-full"></span>
                 </a>
-              ))}
+                ))}
             </div>
 
             <a
               href="#register"
               className={`
-              group relative flex items-center justify-center overflow-hidden transition-all duration-300 shadow-lg hover:shadow-blue-500/40 rounded-full
-              ${scrollY > 50 ? 'px-6 py-2.5 bg-[#020617] text-white text-[10px]' : 'px-8 py-3 bg-[#020617] text-white text-xs'}
+              group relative flex items-center justify-center overflow-hidden transition-all duration-300 shadow-lg hover:shadow-purple-500/40 rounded-full
+              ${scrollY > 50 ? 'px-6 py-2.5 bg-[#2D1B3D] text-white text-[10px]' : 'px-8 py-3 bg-[#2D1B3D] text-white text-xs'}
               font-bold uppercase tracking-[0.2em]
             `}
             >
               <span className="relative z-10 group-hover:text-white transition-colors duration-300">Join Now</span>
-              <span className="absolute inset-0 bg-[#0F52BA] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out origin-left border border-[#0F52BA]"></span>
+              <span className="absolute inset-0 bg-[#6B2D8C] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out origin-left border border-[#6B2D8C]"></span>
             </a>
           </div>
 
@@ -92,7 +92,7 @@ const NavbarCustom = ({ scrollY = 0 }: NavbarProps) => {
                 key={item.label}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-4xl font-serif text-[#020617] hover:text-[#0F52BA] transition-colors"
+                className="text-4xl font-serif text-[#2D1B3D] hover:text-[#6B2D8C] transition-colors"
               >
                 {item.label}
               </a>

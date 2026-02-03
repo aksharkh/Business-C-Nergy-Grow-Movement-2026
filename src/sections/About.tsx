@@ -6,9 +6,9 @@ const About = () => {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
         <div>
           <Reveal>
-            <h2 className="text-6xl md:text-8xl font-serif mb-12 leading-[0.9] text-[#020617]">
+            <h2 className="text-6xl md:text-8xl font-serif mb-12 leading-[0.9] text-[#2D1B3D]">
               The <br />
-              <span className="italic text-[#0F52BA] inline-block hover:skew-x-6 transition-transform duration-500 cursor-default">
+              <span className="italic text-[#6B2D8C] inline-block hover:skew-x-6 transition-transform duration-500 cursor-default">
                 Future
               </span>{' '}
               <br />
@@ -18,7 +18,7 @@ const About = () => {
           <Reveal delay={100}>
             <div className="space-y-8 text-lg text-slate-700 leading-relaxed font-light bg-[#f8fafc] p-8 rounded-2xl border border-slate-200">
               <p className="hover:text-black transition-colors duration-300">
-                <strong className="text-[#0F52BA] font-semibold">Business C-Nergy & Growth Movement 2026</strong> is a national
+                <strong className="text-[#6B2D8C] font-semibold">Business C-Nergy & Growth Movement 2026</strong> is a national
                 initiative uniting corporate leaders, entrepreneurs, and investors.
               </p>
               <p className="hover:text-black transition-colors duration-300">
@@ -31,7 +31,7 @@ const About = () => {
         <div className="relative">
           <Reveal delay={300} direction="zoom">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-slate-200 group">
-              <div className="absolute inset-0 bg-[#0F52BA]/10 mix-blend-overlay z-10"></div>
+              <div className="absolute inset-0 bg-[#6B2D8C]/10 mix-blend-overlay z-10"></div>
               <img
                 src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
                 alt="Leadership"

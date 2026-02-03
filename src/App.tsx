@@ -27,7 +27,7 @@ function App() {
         <Marquee />
         <Impact />
         <About />
-        <Mentors />
+        <Mentors /> 
         <Register />
       </main>
 

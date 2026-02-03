@@ -43,7 +43,7 @@ const Impact = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 pb-8 border-b border-white/10">
           <Reveal direction="right">
             <h2 className="text-5xl md:text-7xl font-serif text-white">
-              Our <span className="italic text-[#0F52BA]">Legacy</span>
+              Our <span className="italic text-[#D4AF37]">Legacy</span>
             </h2>
           </Reveal>
           <Reveal delay={100} direction="left" className="md:text-right max-w-md mt-8 md:mt-0">

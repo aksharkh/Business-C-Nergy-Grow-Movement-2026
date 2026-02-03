@@ -1,12 +1,18 @@
-// Color Scheme
+import DoriaCordova from '../assets/Doria-Cordova-Yellow-Sitting-BEST.jpg';
+import YPLai from '../assets/Mr. YP Lai.jpg';
+import KCSee from '../assets/Mr. KC See.png';
+import GunterConrad from '../assets/Mr Guntur conard.webp';
+// import Gina from '../assets/mentors/gina.jpg';
+
+// Color Scheme - Purple, White & Gold
 export const colors = {
-  primary: '#0F52BA',
-  dark: '#020617',
-  light: '#f0f4f8',
-  lightBg: '#eef2f6',
-  accentCyan: '#06b6d4',
-  accentIndigo: '#6366f1',
-  blue: '#60a5fa',
+  primary: '#6B2D8C',      // Rich Purple
+  dark: '#2D1B3D',         // Dark Purple
+  light: '#FFFFFF',        // White
+  lightBg: '#F8F8F8',      // Off White
+  accentGold: '#D4AF37',   // Gold
+  accentPurple: '#8B4BA8', // Lighter Purple
+  purple: '#6B2D8C',       // Primary Purple
 };
 
 // Animations
@@ -19,11 +25,11 @@ export const animations = {
 
 // Mentors Data
 export const mentorsData = [
-  { name: 'Dame Doria Cordova', role: 'Excellerated Business School, USA' },
-  { name: 'Mr YP Lai', role: 'Work Less Earn More Academy' },
-  { name: 'Mr KC See', role: 'Quest AI, Malaysia' },
-  { name: 'Mr Gunter Conrad', role: 'Germany' },
-  { name: 'Ms Gina', role: 'Impact Leader, Malaysia' },
+  { name: 'Dame Doria Cordova', role: 'Excellerated Business School, USA', linkedin: 'https://www.linkedin.com/in/dccordova/', photo:  DoriaCordova },
+  { name: 'Mr YP Lai', role: 'Work Less Earn More Academy', linkedin: 'https://www.linkedin.com/in/yplai/', photo: YPLai },
+  { name: 'Mr KC See', role: 'Quest AI, Malaysia', linkedin: 'https://www.linkedin.com/in/kcsee/', photo: KCSee },
+  { name: 'Mr Gunter Conrad', role: 'Germany', linkedin: 'https://www.linkedin.com/in/g%C3%BCnter-conrad-82655067/', photo: GunterConrad },
+  { name: 'Ms Gina', role: 'Impact Leader, Malaysia', linkedin: 'https://www.linkedin.com/in/gina-malaysia/', photo: 'https://via.placeholder.com/200x200?text=Ms+Gina' },
 ];
 
 // Navigation Links
