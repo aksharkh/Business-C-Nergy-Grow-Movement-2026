@@ -29,7 +29,7 @@ function App() {
         <Impact />
         <About />
         <Mentors />
-        {/* <FAQ /> */}
+        <FAQ />
         <Register />
       </main>
 

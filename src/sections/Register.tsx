@@ -52,14 +52,14 @@ const Register = () => {
         throw new Error('Google Apps Script URL not configured. Please set VITE_GOOGLE_APPS_SCRIPT_URL in .env.local');
       }
 
-      const response = await fetch(scriptUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'text/plain',
-        },
-        body: JSON.stringify(formData),
-      });
+      // const response = await fetch(scriptUrl, {
+      //   method: 'POST',
+      //   mode: 'no-cors',
+      //   headers: {
+      //     'Content-Type': 'text/plain',
+      //   },
+      //   body: JSON.stringify(formData),
+      // });
 
       // With no-cors mode, assume success if no error
       setNotification({

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, ReactNode } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import type { RevealProps } from '../types/index';
 
 const Reveal = ({ children, className = '', delay = 0, direction = 'up' }: RevealProps) => {
