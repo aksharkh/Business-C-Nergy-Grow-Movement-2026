@@ -4,7 +4,7 @@ import CustomButton from '../components/CustomButton';
 
 const Hero = () => {
   return (
-    <header className="relative min-h-screen pt-32 pb-20 flex flex-col justify-center overflow-hidden">
+    <header className="relative min-h-screen pt-22 pb-20 flex flex-col justify-center overflow-hidden">
       <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-8">
           <Reveal direction="down">
@@ -13,7 +13,7 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6B2D8C] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#6B2D8C]"></span>
               </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#2D1B3D]">Visit Malaysia 2026 Partner</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#2D1B3D]">🇲🇾 Visit Malaysia 2026 Partner</span>
             </div>
           </Reveal>
 
@@ -27,22 +27,19 @@ const Hero = () => {
                 </svg>
               </span>
             </h1>
-            <p className="block text-sm md:text-lg font-sans font-light tracking-wide text-slate-600 mt-8 leading-relaxed max-w-2xl border-l-2 border-[#6B2D8C] pl-6 bg-white/20 backdrop-blur-sm py-4 pr-4 rounded-r-xl">
-              Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+            <p className="block text-base md:text-lg font-sans font-light tracking-wide text-slate-700 mt-8 leading-relaxed max-w-3xl border-l-4 border-[#6B2D8C] pl-6 bg-white/40 backdrop-blur-sm py-4 pr-4 rounded-r-xl hover:bg-white/60 transition-all duration-300">
+              <strong>Business C-Nergy & Growth Movement 2026</strong> unites corporate leaders, entrepreneurs, and investors in a national initiative to build a new era of conscious capitalism—where purpose and profit coexist, and business becomes a force for good.
             </p>
-            <p className="block text-sm md:text-lg font-sans font-light tracking-wide text-slate-600 mt-8 leading-relaxed max-w-2xl border-l-2 border-[#6B2D8C] pl-6 bg-white/20 backdrop-blur-sm py-4 pr-4 rounded-r-xl">
-              Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
+            <p className="block text-base md:text-lg font-sans font-light tracking-wide text-slate-700 mt-6 leading-relaxed max-w-2xl border-l-4 border-[#D4AF37] pl-6 bg-white/40 backdrop-blur-sm py-4 pr-4 rounded-r-xl hover:bg-white/60 transition-all duration-300">
+              Aligned with Visit Malaysia 2026, we position Malaysia as <strong className="text-[#6B2D8C]">Asia's Conscious Business Capital</strong>—bridging impact capital from Malaysia to Asia, and Asia to the World. We're not just doing business. We're building legacy.
             </p>
-            {/* <p className="block text-sm md:text-lg font-sans font-light tracking-wide text-slate-600 mt-8 leading-relaxed max-w-2xl border-l-2 border-[#0F52BA] pl-6 bg-white/20 backdrop-blur-sm py-4 pr-4 rounded-r-xl">
-              Igniting a new wave of possibilities. Bridging impact capital from Malaysia to Asia, and Asia to the World.
-            </p> */}
           </Reveal>
 
           <Reveal delay={400} className="flex flex-col sm:flex-row gap-6 mt-12">
             <CustomButton primary href="#register">
-              Secure Spot
+              Secure Your Spot
             </CustomButton>
-            <CustomButton href="https://www.linkedin.com/events/7415455404165541888/">
+            <CustomButton href="https://www.linkedin.com/events/7415455404165541888/" target="_blank">
               <Play size={16} className="mr-3" fill="currentColor" /> Watch Launch
             </CustomButton>
           </Reveal>

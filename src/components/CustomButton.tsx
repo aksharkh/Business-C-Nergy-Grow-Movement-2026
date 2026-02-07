@@ -1,8 +1,15 @@
 import type { ButtonProps } from '../types/index';
 
-const CustomButton = ({ children, primary = false, href = '#' }: ButtonProps) => (
+interface CustomButtonProps extends ButtonProps {
+  target?: string;
+  rel?: string;
+}
+
+const CustomButton = ({ children, primary = false, href = '#', target, rel }: CustomButtonProps) => (
   <a
     href={href}
+    target={target}
+    rel={rel}
     className={`
       group relative inline-flex items-center justify-center px-8 py-4 text-sm font-bold tracking-[0.2em] uppercase overflow-hidden transition-all duration-500 shadow-lg hover:shadow-purple-500/40 rounded-sm
       ${

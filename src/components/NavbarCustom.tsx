@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { navLinks } from '../utils/constants';
+import logo from '../assets/logo.jpeg'
 
 interface NavbarProps {
   scrollY?: number;
@@ -18,22 +19,27 @@ const NavbarCustom = ({ scrollY = 0 }: NavbarProps) => {
           ${
             scrollY > 50
               ? 'top-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[85%] max-w-[1000px] rounded-full bg-white/60 backdrop-blur-2xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.06)] py-3 px-6'
-              : 'top-0 left-0 w-full bg-transparent border-b border-transparent py-8 px-6 md:px-12'
+              : 'top-0 left-0 w-full bg-transparent border-b border-transparent py-4 px-6 md:px-12'
           }
         `}
       >
         <div className={`flex justify-between items-center w-full ${scrollY < 50 ? 'max-w-[1400px] mx-auto' : ''}`}>
           <a href="#" className="flex items-center gap-3 group">
             {/* Logo */}
+            
             <div
-              className={`
-              flex items-center justify-center font-serif font-bold rounded-full transition-all duration-500 shadow-lg shadow-purple-500/30
-              ${scrollY > 50 ? 'w-10 h-10 text-xl bg-[#6B2D8C] text-white' : 'w-12 h-12 text-2xl bg-[#6B2D8C] text-white'}
-              group-hover:bg-[#2D1B3D] group-hover:text-[#D4AF37]
+            className={`
+                flex items-center justify-center rounded-full overflow-hidden transition-all duration-500 shadow-xl 
+                ${scrollY > 50 ? 'w-12 h-12' : 'w-16 h-16'}
             `}
             >
-              C
+            <img
+                src={logo}
+                alt="Business C-Nergy Logo"
+                className="w-full h-full object-cover"
+            />
             </div>
+
             <div className="hidden md:block leading-tight">
               <div className="text-xs font-bold tracking-[0.25em] uppercase text-[#2D1B3D] group-hover:text-[#6B2D8C] transition-colors">
                 Business C-Nergy
@@ -76,7 +82,7 @@ const NavbarCustom = ({ scrollY = 0 }: NavbarProps) => {
 
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-[#020617] hover:text-[#0F52BA] transition-colors"
+            className="lg:hidden text-[#2D1B3D] hover:text-[#6B2D8C] transition-colors"
           >
             {isMenuOpen ? <X /> : <Menu />}
           </button>

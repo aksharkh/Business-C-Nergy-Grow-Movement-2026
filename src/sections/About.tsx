@@ -16,14 +16,22 @@ const About = () => {
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <div className="space-y-8 text-lg text-slate-700 leading-relaxed font-light bg-[#f8fafc] p-8 rounded-2xl border border-slate-200">
-              <p className="hover:text-black transition-colors duration-300">
-                <strong className="text-[#6B2D8C] font-semibold">Business C-Nergy & Growth Movement 2026</strong> is a national
-                initiative uniting corporate leaders, entrepreneurs, and investors.
-              </p>
-              <p className="hover:text-black transition-colors duration-300">
-                Aligned with the Visit Malaysia 2026 vision, we position Malaysia as Asia's Conscious Business Capital.
-              </p>
+            <div className="space-y-8 text-lg text-slate-700 leading-relaxed font-light">
+              <div className="bg-[#f8fafc] p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
+                <p className="hover:text-black transition-colors duration-300">
+                  <strong className="text-[#6B2D8C] font-semibold">Business C-Nergy & Growth Movement 2026</strong> is a national initiative uniting corporate leaders, entrepreneurs, and investors.
+                </p>
+              </div>
+              <div className="bg-[#f8fafc] p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
+                <p className="hover:text-black transition-colors duration-300">
+                  Aligned with the Visit Malaysia 2026 vision, we position Malaysia as <strong>Asia's Conscious Business Capital</strong>—a hub where sustainable growth, social impact, and economic prosperity converge.
+                </p>
+              </div>
+              <div className="bg-[#6B2D8C]/10 border-l-4 border-[#6B2D8C] p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
+                <p className="text-[#2D1B3D] font-semibold hover:text-[#6B2D8C] transition-colors duration-300">
+                  We believe business is more than profit. It's about purpose. By bridging impact capital from Malaysia to Asia and Asia to the World, we're building a movement where leaders co-create solutions that matter.
+                </p>
+              </div>
             </div>
           </Reveal>
         </div>
@@ -33,13 +41,16 @@ const About = () => {
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl border border-slate-200 group">
               <div className="absolute inset-0 bg-[#6B2D8C]/10 mix-blend-overlay z-10"></div>
               <img
-                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
-                alt="Leadership"
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80"
+                alt="Leadership & Collaboration"
                 className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
               />
-              <div className="absolute bottom-6 left-6 right-6 p-8 bg-white/90 backdrop-blur-xl max-w-md z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 shadow-lg rounded-xl border border-white/60">
-                <p className="font-serif italic text-2xl text-[#020617] leading-tight">
+              <div className="absolute bottom-6 left-6 right-6 p-8 bg-white/95 backdrop-blur-xl max-w-md z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 shadow-lg rounded-xl border border-white/60">
+                <p className="font-serif italic text-2xl text-[#6B2D8C] leading-tight mb-2">
                   "From Malaysia to Asia, and Asia to the World."
+                </p>
+                <p className="text-sm text-slate-600">
+                  Building a global network of conscious leaders committed to sustainable, purpose-driven business.
                 </p>
               </div>
             </div>
