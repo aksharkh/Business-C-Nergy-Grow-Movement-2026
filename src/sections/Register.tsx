@@ -11,7 +11,8 @@ const Register = () => {
     email: '',
     whatsapp: '',
     company: '',
-    interest: 'Business Leader',
+    yearsInBusiness: '',
+    interest: 'Business Leaders who want to participate & stay updated with movement',
     referral: '',
     consent: false,
   });
@@ -52,20 +53,21 @@ const Register = () => {
         throw new Error('Google Apps Script URL not configured. Please set VITE_GOOGLE_APPS_SCRIPT_URL in .env.local');
       }
 
-      // const response = await fetch(scriptUrl, {
-      //   method: 'POST',
-      //   mode: 'no-cors',
-      //   headers: {
-      //     'Content-Type': 'text/plain',
-      //   },
-      //   body: JSON.stringify(formData),
-      // });
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+        body: JSON.stringify(formData),
+      });
 
       // With no-cors mode, assume success if no error
       setNotification({
         type: 'success',
         message: 'Thank you for registering! We\'ll be in touch soon.'
       });
+      console.log('Form submitted successfully', response);
       
       // Reset form
       setFormData({
@@ -73,7 +75,8 @@ const Register = () => {
         email: '',
         whatsapp: '',
         company: '',
-        interest: 'Business Leader',
+        yearsInBusiness: '',
+        interest: 'Business Leaders who want to participate & stay updated with movement',
         referral: '',
         consent: false,
       });
@@ -102,12 +105,10 @@ const Register = () => {
   ];
 
   const interestOptions = [
-    'Business Leader',
-    'Entrepreneur',
-    'Service Provider',
-    'Trainer/Coach',
-    'Consultant',
-    'Investor',
+    'Business Leaders who want to participate & stay updated with movement',
+    'HRDC Registered Training Provider with trainers network',
+    'Service Provider to SMEs - Corporates : F&B, Digital Marketing, Corporate Gifts, etc.',
+    'Int\'l Professional Trainers and Consultants',
     'Other'
   ];
 
@@ -135,10 +136,10 @@ const Register = () => {
           </div>
           <h2 className="text-5xl md:text-7xl font-serif text-white mb-6">Ready for 2026?</h2>
           <p className="text-slate-300 mb-4 text-xl max-w-2xl mx-auto">
-            Join hands for the <span className="text-[#D4AF37] font-bold">Business C-Nergy & Grow Movement 2026</span>
+            <span className="text-[#D4AF37] font-bold">Business C-Nergy & Grow Movement 2026</span>
           </p>
-          <p className="text-slate-400 text-lg max-w-3xl mx-auto">
-            Discover partnership opportunities, investment resources and contacts, certification frameworks & tools to scale your team. Part of Malaysia's journey to become Asia's Conscious Business Capital.
+          <p className="text-slate-400 text-lg max-w-4xl mx-auto">
+            🟣 <strong>30+ Inspirational Global Mentors</strong> | 🟣 <strong>20 LIVE Learning Power Break Sessions</strong> | 🟣 <strong>5000+ Business Leaders Impacted</strong> | 🟣 <strong>400+ Business Projects Matched</strong> | 🟣 <strong>80+ Organizations Scaled</strong> | 🟣 <strong>100+ Children Funded for Education</strong>
           </p>
         </Reveal>
 
@@ -249,11 +250,25 @@ const Register = () => {
                 </div>
               </div>
 
-              {/* Interest & Referral */}
+              {/* Years in Business & Interest */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="group">
+                  <label className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
+                    Number of years in Business
+                  </label>
+                  <input
+                    type="text"
+                    name="yearsInBusiness"
+                    value={formData.yearsInBusiness}
+                    onChange={handleChange}
+                    disabled={isLoading}
+                    className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white text-base focus:ring-2 focus:ring-[#6B2D8C] focus:bg-white/10 focus:border-white/30 outline-none transition-all placeholder-white/30 group-hover:border-white/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                    placeholder="e.g. 5"
+                  />
+                </div>
+                <div className="group">
                   <label htmlFor="interest" className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
-                    I'm interested as *
+                    Interest to Participate as *
                   </label>
                   <select
                     id="interest"
@@ -271,20 +286,23 @@ const Register = () => {
                     ))}
                   </select>
                 </div>
-                <div className="group">
-                  <label className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
-                    How did you hear about us?
-                  </label>
-                  <input
-                    type="text"
-                    name="referral"
-                    value={formData.referral}
-                    onChange={handleChange}
-                    disabled={isLoading}
-                    className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white text-base focus:ring-2 focus:ring-[#6B2D8C] focus:bg-white/10 focus:border-white/30 outline-none transition-all placeholder-white/30 group-hover:border-white/20 disabled:opacity-50 disabled:cursor-not-allowed"
-                    placeholder="Friend, Social Media, LinkedIn, etc."
-                  />
-                </div>
+              </div>
+
+              {/* Referral */}
+              <div className="mb-6 group">
+                <label className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
+                  Referred By *
+                </label>
+                <input
+                  type="text"
+                  name="referral"
+                  value={formData.referral}
+                  onChange={handleChange}
+                  required
+                  disabled={isLoading}
+                  className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white text-base focus:ring-2 focus:ring-[#6B2D8C] focus:bg-white/10 focus:border-white/30 outline-none transition-all placeholder-white/30 group-hover:border-white/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                  placeholder="Who referred you?"
+                />
               </div>
 
               {/* Consent Checkbox */}
@@ -300,7 +318,7 @@ const Register = () => {
                   className="w-5 h-5 rounded border-white/30 text-[#6B2D8C] focus:ring-2 focus:ring-[#6B2D8C] mt-1 cursor-pointer accent-[#6B2D8C] disabled:opacity-50 disabled:cursor-not-allowed"
                 />
                 <label htmlFor="consent" className="text-white text-sm cursor-pointer">
-                  I agree to PDPA (Personal Data Protection Act) and consent to receive updates about the Business C-Nergy & Grow Movement 2026 *
+                  I agree and accept that All information gathered by GOGLOBAL Business School & Work Less Earn More Academy, is maintained in accordance to the the PDPA laws of Singapore, and shared ONLY to the SHINE GOGLOBAL & Its related company to serve the purpose of this movement, sharing the relevant information needed for my business and personal growth
                 </label>
               </div>
 

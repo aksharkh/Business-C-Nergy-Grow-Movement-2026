@@ -18,24 +18,27 @@ const Hero = () => {
           </Reveal>
 
           <Reveal delay={200}>
-            <h1 className="text-[12vw] lg:text-[7vw] font-serif leading-[0.85] tracking-tight text-[#2D1B3D] mb-8 drop-shadow-sm">
-              Conscious <br />
+            <h1 className="text-[10vw] lg:text-[6vw] font-serif leading-[0.9] tracking-tight text-[#2D1B3D] mb-8 drop-shadow-sm">
+              Business C-Nergy & <br />
               <span className="text-[#6B2D8C] italic pr-4 relative inline-block">
-                Capital
+                Growth Movement
                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-[#D4AF37]/30" viewBox="0 0 100 10" preserveAspectRatio="none">
                   <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
                 </svg>
               </span>
             </h1>
-            <p className="block text-base md:text-lg font-sans font-light tracking-wide text-slate-700 mt-8 leading-relaxed max-w-3xl border-l-4 border-[#6B2D8C] pl-6 bg-white/40 backdrop-blur-sm py-4 pr-4 rounded-r-xl hover:bg-white/60 transition-all duration-300">
-              <strong>Business C-Nergy & Growth Movement 2026</strong> unites corporate leaders, entrepreneurs, and investors in a national initiative to build a new era of conscious capitalism—where purpose and profit coexist, and business becomes a force for good.
+            <p className="block text-xl md:text-2xl font-serif italic text-[#6B2D8C] mb-8 leading-relaxed">
+              Igniting Conscious Co-Creation & Bridging Impact Capital
             </p>
-            <p className="block text-base md:text-lg font-sans font-light tracking-wide text-slate-700 mt-6 leading-relaxed max-w-2xl border-l-4 border-[#D4AF37] pl-6 bg-white/40 backdrop-blur-sm py-4 pr-4 rounded-r-xl hover:bg-white/60 transition-all duration-300">
-              Aligned with Visit Malaysia 2026, we position Malaysia as <strong className="text-[#6B2D8C]">Asia's Conscious Business Capital</strong>—bridging impact capital from Malaysia to Asia, and Asia to the World. We're not just doing business. We're building legacy.
+            <p className="block text-base md:text-lg font-sans font-light tracking-wide text-slate-700 mt-6 leading-relaxed max-w-3xl border-l-4 border-[#6B2D8C] pl-6 bg-white/40 backdrop-blur-sm py-4 pr-4 rounded-r-xl hover:bg-white/60 transition-all duration-300">
+              Are you Ready for a <strong>New Wave Of Possibilities and Exponential Leap</strong> for your Business - Life and Impact in 2026 and Beyond from/in Malaysia Going Global!
+            </p>
+            <p className="block text-base md:text-lg font-sans font-light tracking-wide text-slate-700 mt-6 leading-relaxed max-w-4xl border-l-4 border-[#D4AF37] pl-6 bg-white/40 backdrop-blur-sm py-4 pr-4 rounded-r-xl hover:bg-white/60 transition-all duration-300">
+              <strong className="text-[#6B2D8C]">Business C-Nergy & Growth Movement 2026</strong> - Conscious Co-Creationg and Bridging to Impact Capital, a regional transformation initiative for the collective economic growth of businesses in the region – Economic Footprint Forward.
             </p>
           </Reveal>
 
-          <Reveal delay={400} className="flex flex-col sm:flex-row gap-6 mt-12">
+          <Reveal delay={400} className="flex flex-col sm:flex-row gap-6 mt-10">
             <CustomButton primary href="#register">
               Secure Your Spot
             </CustomButton>
@@ -85,7 +88,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 animate-bounce">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40 animate-bounce">
         <span className="text-[10px] uppercase tracking-widest text-slate-800">Scroll</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-slate-800 to-transparent"></div>
       </div>

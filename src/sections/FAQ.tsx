@@ -33,7 +33,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-32 relative z-10 bg-[#f8fafc]">
+    <section id="faq" className="py-20 relative z-10 bg-[#f8fafc]">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
         <Reveal className="text-center mb-20">
           <h2 className="text-5xl md:text-7xl font-serif text-[#2D1B3D] mb-6">
@@ -82,7 +82,7 @@ const FAQ = () => {
             Have more questions? Our team is here to help.
           </p>
           <a
-            href="mailto:hello@businesscnergy2026.my"
+            href="mailto:aksharkh04@gmail.com"
             className="inline-block px-8 py-3 bg-[#6B2D8C] text-white font-bold rounded-lg hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
           >
             Contact Us

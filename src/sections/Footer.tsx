@@ -29,9 +29,10 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="text-right">
-          <p>Organized by GOGLOBAL Business Solutions</p>
-        </div>
+        {/* <div className="text-right">
+          <p>Organised by <strong>GOGLOBAL Business Solutions Sdn Bhd</strong></p>
+          <p className="text-xs text-slate-400 mt-2">A Project of GOGLOBAL Business School - SHINE GOGLOBAL | In Partnership with Workless Earn More Academy</p>
+        </div> */}
       </div>
     </footer>
   );

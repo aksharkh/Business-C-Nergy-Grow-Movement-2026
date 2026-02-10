@@ -2,7 +2,7 @@ import DoriaCordova from '../assets/Doria-Cordova-Yellow-Sitting-BEST.jpg';
 import YPLai from '../assets/Mr. YP Lai.jpg';
 import KCSee from '../assets/Mr. KC See.png';
 import GunterConrad from '../assets/Mr Guntur conard.webp';
-// import Gina from '../assets/mentors/gina.jpg';
+import Gina from '../assets/Gina.jpeg';
 
 // Color Scheme - Purple, White & Gold
 export const colors = {
@@ -34,21 +34,21 @@ export const mentorsData = [
   },
   { 
     name: 'Mr YP Lai', 
-    role: 'Work Less Earn More Academy', 
-    bio: 'Business strategist and author. Specializes in helping entrepreneurs create scalable, sustainable businesses that generate wealth while maintaining work-life balance.',
+    role: 'Work Less Earn More Academy, Malaysia - Australia', 
+    bio: 'Business strategist helping entrepreneurs create scalable, sustainable businesses that generate wealth while maintaining work-life balance.',
     linkedin: 'https://www.linkedin.com/in/yplai/', 
     photo: YPLai 
   },
   { 
     name: 'Mr KC See', 
     role: 'Quest AI, Malaysia', 
-    bio: 'Technology innovator and AI expert. Empowering businesses in Southeast Asia to leverage AI for growth and competitive advantage in the digital economy.',
+    bio: 'Technology innovator and AI expert. Empowering businesses in Southeast Asia to leverage AI for growth and competitive advantage.',
     linkedin: 'https://www.linkedin.com/in/kcsee/', 
     photo: KCSee 
   },
   { 
     name: 'Mr Gunter Conrad', 
-    role: 'International Business Advisor, Germany', 
+    role: 'Business Advisor, Germany', 
     bio: 'Global business strategist with expertise in European-Asian market bridges. Facilitates cross-border investments and strategic partnerships.',
     linkedin: 'https://www.linkedin.com/in/g%C3%BCnter-conrad-82655067/', 
     photo: GunterConrad 
@@ -57,8 +57,8 @@ export const mentorsData = [
     name: 'Ms Gina', 
     role: 'Impact Leader, Malaysia', 
     bio: 'Advocate for conscious business and sustainable development. Connects passionate entrepreneurs with impact-driven investment opportunities.',
-    linkedin: 'https://www.linkedin.com/in/gina-malaysia/', 
-    photo: 'https://via.placeholder.com/200x200?text=Ms+Gina' 
+    linkedin: 'https://www.linkedin.com/in/gina-phan/', 
+    photo: Gina
   },
 ];
 

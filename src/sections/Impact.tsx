@@ -7,30 +7,37 @@ const Impact = () => {
     {
       icon: Users,
       number: '5000+',
-      label: 'Leaders Impacted',
-      subtext: 'Empowering a new generation of conscious leaders across the ASEAN region to drive sustainable economic growth.',
+      label: 'Business Leaders Impacted',
+      subtext: 'Professional standards raised, impacting Malaysia - Asian business ecosystem.',
       span: 'lg:col-span-2',
     },
     {
       icon: Briefcase,
       number: '400+',
-      label: 'Projects Matched',
-      subtext: 'Connecting visionary projects with the capital needed to scale globally.',
+      label: 'Business Projects Matched',
+      subtext: 'Business projects matched and elevated through mentorship and investment.',
       span: '',
     },
     {
       icon: Globe,
       number: '80+',
-      label: 'Global Expansions',
-      subtext: 'Facilitating international market entry for Malaysian businesses.',
+      label: 'Organisations Scaled',
+      subtext: 'Business organisations scaled for going global and investment readiness.',
+      span: '',
+    },
+    {
+      icon: Globe, // Reusing Globe for countries
+      number: '10+',
+      label: 'Countries Expanded',
+      subtext: 'Expanding their Economic Footprint across the region.',
       span: '',
     },
     {
       icon: Heart,
       number: '100+',
       label: 'Children Funded',
-      subtext: 'Direct education funding for rural and special needs children.',
-      span: '',
+      subtext: 'Education fund and resources supporting rural and special needs children.',
+      span: 'lg:col-span-2',
     },
   ];
 

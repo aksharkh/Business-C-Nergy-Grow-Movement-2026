@@ -5,9 +5,11 @@ import Hero from './sections/Hero';
 import Marquee from './sections/Marquee';
 import Impact from './sections/Impact';
 import About from './sections/About';
+import Events from './sections/Events';
 import Mentors from './sections/Mentors';
 import FAQ from './sections/FAQ';
 import Register from './sections/Register';
+import Partners from './sections/Partners';
 import Footer from './sections/Footer';
 import './App.css';
 
@@ -28,9 +30,11 @@ function App() {
         <Marquee />
         <Impact />
         <About />
+        <Events />
         <Mentors />
         <FAQ />
         <Register />
+        <Partners />
       </main>
 
       {/* Footer */}

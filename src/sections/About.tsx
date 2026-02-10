@@ -18,18 +18,20 @@ const About = () => {
           <Reveal delay={100}>
             <div className="space-y-8 text-lg text-slate-700 leading-relaxed font-light">
               <div className="bg-[#f8fafc] p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-serif text-[#2D1B3D] mb-4">Our Purpose</h3>
                 <p className="hover:text-black transition-colors duration-300">
-                  <strong className="text-[#6B2D8C] font-semibold">Business C-Nergy & Growth Movement 2026</strong> is a national initiative uniting corporate leaders, entrepreneurs, and investors.
+                  <strong className="text-[#6B2D8C] font-semibold">Business C-Nergy & Growth Movement (BCG) 2026</strong> is a national and regional initiative to unite corporate leaders, entrepreneurs, and trainers in a transformative ecosystem. We integrate <strong>Conscious Living, Conscious Leadership, and Conscious Profits</strong> to reshape business, leadership, and community well-being.
                 </p>
               </div>
               <div className="bg-[#f8fafc] p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-xl font-serif text-[#2D1B3D] mb-4">Wholistic Pillars</h3>
                 <p className="hover:text-black transition-colors duration-300">
-                  Aligned with the Visit Malaysia 2026 vision, we position Malaysia as <strong>Asia's Conscious Business Capital</strong>—a hub where sustainable growth, social impact, and economic prosperity converge.
+                  We integrate <strong>Business Team Alignment, Conscious Collaboration, and Investability Dynamics</strong> with the SHINE GOGLOBAL Conscious Capitalism Framework to create lasting positive change for business leaders across Malaysia and Asia – World.
                 </p>
               </div>
               <div className="bg-[#6B2D8C]/10 border-l-4 border-[#6B2D8C] p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
                 <p className="text-[#2D1B3D] font-semibold hover:text-[#6B2D8C] transition-colors duration-300">
-                  We believe business is more than profit. It's about purpose. By bridging impact capital from Malaysia to Asia and Asia to the World, we're building a movement where leaders co-create solutions that matter.
+                  The movement aligns with the <strong>Visit Malaysia 2026</strong>, we position Malaysia as <strong>Asia's Conscious Business Capital</strong>—where corporate growth, wellness, and sustainability coexist through conscious leadership, powered by Digital AI Platforms.
                 </p>
               </div>
             </div>
