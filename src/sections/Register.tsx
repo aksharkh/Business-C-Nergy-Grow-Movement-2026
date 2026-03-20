@@ -108,7 +108,7 @@ const Register = () => {
     'Business Leaders who want to participate & stay updated with movement',
     'HRDC Registered Training Provider with trainers network',
     'Service Provider to SMEs - Corporates : F&B, Digital Marketing, Corporate Gifts, etc.',
-    'Int\'l Professional Trainers and Consultants',
+    'International Professional Trainers and Consultants',
     'Other'
   ];
 
