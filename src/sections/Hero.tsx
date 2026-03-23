@@ -1,6 +1,7 @@
 import { Play } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import CustomButton from '../components/CustomButton';
+import GroupPhoto from '../assets/groupphoto.jpeg'
 
 const Hero = () => {
   return (
@@ -38,17 +39,28 @@ const Hero = () => {
             </p>
           </Reveal>
 
-          <Reveal delay={400} className="flex flex-col sm:flex-row gap-6 mt-10">
-            <CustomButton primary href="#register">
-              Secure Your Spot
-            </CustomButton>
-            <CustomButton href="https://www.linkedin.com/events/7415455404165541888/" target="_blank">
-              <Play size={16} className="mr-3" fill="currentColor" /> Watch Launch
-            </CustomButton>
+          <Reveal delay={400} className="flex flex-col gap-4 mt-10">
+            <p className="text-[#6B2D8C] font-semibold text-sm tracking-wide uppercase">
+              Get Free Access and Updates to Activities & Opportunities
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6">
+              <CustomButton primary href="#register">
+                Join the Movement
+              </CustomButton>
+              <CustomButton href="https://www.linkedin.com/events/7415455404165541888/" target="_blank">
+                <Play size={16} className="mr-3" fill="currentColor" /> Watch Launch
+              </CustomButton>
+            </div>
           </Reveal>
         </div>
 
-        <div className="lg:col-span-4 lg:border-l lg:border-slate-300/50 lg:pl-12 lg:h-full flex flex-col justify-center pb-4">
+        <div className="lg:col-span-4 lg:border-l lg:border-slate-300/50 lg:pl-12 lg:h-full flex flex-col justify-center pb-4 relative">
+          {/* Group Photo Watermark */}
+          <div 
+            className="absolute inset-0 opacity-10 mix-blend-multiply bg-cover bg-center rounded-3xl" 
+            style={{ backgroundImage: `url(${GroupPhoto})` }}
+          />
+          
           <Reveal delay={600} direction="left">
             <div className="relative h-96">
               

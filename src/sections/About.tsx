@@ -6,33 +6,47 @@ const About = () => {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
         <div>
           <Reveal>
-            <h2 className="text-6xl md:text-8xl font-serif mb-12 leading-[0.9] text-[#2D1B3D]">
-              The <br />
-              <span className="italic text-[#6B2D8C] inline-block hover:skew-x-6 transition-transform duration-500 cursor-default">
-                Future
-              </span>{' '}
-              <br />
-              Is Conscious.
+            <p className="text-[#6B2D8C] font-bold tracking-[0.2em] uppercase mb-4">ABOUT US</p>
+            <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-[1.1] text-[#2D1B3D]">
+              With 100+ Collective Years of Experience in Transforming Businesses & Impacting lives Globally
             </h2>
+            <p className="text-2xl italic text-[#D4AF37] font-serif mb-10">
+              Conscious Business. Global Impact. Collective Growth.
+            </p>
           </Reveal>
+          
           <Reveal delay={100}>
-            <div className="space-y-8 text-lg text-slate-700 leading-relaxed font-light">
-              <div className="bg-[#f8fafc] p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-serif text-[#2D1B3D] mb-4">Our Purpose</h3>
-                <p className="hover:text-black transition-colors duration-300">
-                  <strong className="text-[#6B2D8C] font-semibold">Business C-Nergy & Growth Movement (BCG) 2026</strong> is a national and regional initiative to unite corporate leaders, entrepreneurs, and trainers in a transformative ecosystem. We integrate <strong>Conscious Living, Conscious Leadership, and Conscious Profits</strong> to reshape business, leadership, and community well-being.
+            <div className="space-y-6 text-base text-slate-700 leading-relaxed font-light">
+              <div className="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-lg font-serif text-[#2D1B3D] mb-3">Our Mission</h3>
+                <p>
+                  <strong>Mission Possible:</strong> An United Community of Asia’s leading transformation professionals nurtured in a Collaborative Framework — Raising industry standards and amplifying business, leadership, and wellness impact in the region for generational legacy creation. Transforming the way people do business - Travel and Impact lives globally, through GOGLOBAL Conscious Capitalism Framework.
                 </p>
               </div>
-              <div className="bg-[#f8fafc] p-8 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
-                <h3 className="text-xl font-serif text-[#2D1B3D] mb-4">Wholistic Pillars</h3>
-                <p className="hover:text-black transition-colors duration-300">
-                  We integrate <strong>Business Team Alignment, Conscious Collaboration, and Investability Dynamics</strong> with the SHINE GOGLOBAL Conscious Capitalism Framework to create lasting positive change for business leaders across Malaysia and Asia – World.
-                </p>
+
+              <div className="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-lg font-serif text-[#2D1B3D] mb-3">For You, Business Leaders In:</h3>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>Hotels, resorts, Travel and Tourism operators.</li>
+                  <li>Beauty and Wellness Centers, Eco-tourism, and conscious retreats.</li>
+                  <li>Hospitality suppliers, food, retail, logistics, training, manufactures and technology firms.</li>
+                  <li>Professional Trainers, Coaches & Consultants supporting the above industries.</li>
+                  <li>Anyone ready to scale their team through conscious leadership, wellness, and innovation.</li>
+                </ul>
               </div>
-              <div className="bg-[#6B2D8C]/10 border-l-4 border-[#6B2D8C] p-8 rounded-2xl hover:shadow-lg transition-all duration-300">
-                <p className="text-[#2D1B3D] font-semibold hover:text-[#6B2D8C] transition-colors duration-300">
-                  The movement aligns with the <strong>Visit Malaysia 2026</strong>, we position Malaysia as <strong>Asia's Conscious Business Capital</strong>—where corporate growth, wellness, and sustainability coexist through conscious leadership, powered by Digital AI Platforms.
-                </p>
+
+              <div className="bg-gradient-to-r from-[#D4AF37]/20 to-[#6B2D8C]/10 p-6 rounded-2xl border border-[#D4AF37]/30 hover:shadow-lg transition-all duration-300">
+                <h3 className="text-lg font-serif text-[#6B2D8C] font-bold mb-2">OUR GIFT FOR YOU</h3>
+                <p className="text-slate-800 font-medium">WE COME TO YOUR BOARDROOM TO MEET YOU & YOUR BUSINESS TEAM - FREE OF COST (Worth thousands of dollars)</p>
+                <div className="mt-4 text-sm pt-3 border-t border-[#D4AF37]/30">
+                  <strong>Topic Coverage:</strong> Business Growth, Investment, AI Technology, Team Development, Going Global Culture, Business Innovation, Wellness & Tourism Eco-systems.
+                </div>
+              </div>
+
+              <div className="bg-[#6B2D8C]/10 border-l-4 border-[#6B2D8C] p-6 rounded-2xl hover:shadow-lg transition-all duration-300">
+                <a href="#register" className="block text-[#2D1B3D] font-medium hover:text-[#6B2D8C] transition-colors duration-300">
+                  <strong>JOIN THE BUSINESS C-NERGY GROWTH MOVEMENT</strong> - Together we are transforming the way people do business, travel and impact lives globally.
+                </a>
               </div>
             </div>
           </Reveal>

@@ -14,16 +14,16 @@ const StatCard = ({ icon: Icon, number, label, subtext, className = '' }: StatCa
     <div className="absolute inset-0 bg-gradient-to-br from-[#6B2D8C]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
     <div className="relative z-10 flex justify-between items-start">
-      <div className="p-3 bg-white/10 rounded-xl text-[#D4AF37] group-hover:bg-[#6B2D8C] group-hover:text-white transition-all duration-500 group-hover:scale-110 shadow-inner border border-white/10">
+      <div className="p-3 bg-white/10 rounded-xl text-black group-hover:bg-[#6B2D8C] group-hover:text-white transition-all duration-500 group-hover:scale-110 shadow-inner border border-white/10">
         <Icon size={24} />
       </div>
-      <ArrowUpRight className="text-white/30 group-hover:text-[#D4AF37] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" size={24} />
+      <ArrowUpRight className="text-black group-hover:text-[#D4AF37] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-500" size={24} />
     </div>
     <div className="relative z-10 mt-12">
-      <h3 className="text-5xl md:text-6xl font-serif text-white mb-2 tracking-tight group-hover:text-[#D4AF37] transition-colors duration-300">
+      <h3 className="text-5xl md:text-6xl font-serif text-white mb-2 tracking-tight group-hover:text-black transition-colors duration-300">
         {number}
       </h3>
-      <p className="text-[#D4AF37] text-xs font-bold tracking-[0.2em] uppercase mb-4">{label}</p>
+      <p className="text-black text-xs font-bold tracking-[0.2em] uppercase mb-4">{label}</p>
       <p className="text-white/50 text-sm leading-relaxed border-t border-white/10 pt-4 group-hover:border-[#6B2D8C]/50 transition-colors duration-500">
         {subtext}
       </p>

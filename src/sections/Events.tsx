@@ -70,6 +70,17 @@ const Events = () => {
             </div>
           </Reveal>
         </div>
+        
+        <Reveal className="text-center mt-16" delay={300}>
+          <div className="bg-[#6B2D8C]/10 border border-[#6B2D8C]/20 p-8 rounded-2xl max-w-4xl mx-auto shadow-sm">
+            <h3 className="text-2xl md:text-3xl font-serif text-[#2D1B3D] mb-6">
+              Partner us for elevated impact in your Business & Life
+            </h3>
+            <a href="#register" className="inline-block px-8 py-4 bg-[#6B2D8C] text-white font-bold tracking-widest uppercase rounded-lg hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 transform hover:-translate-y-1">
+              Join the Movement
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

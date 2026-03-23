@@ -29,6 +29,10 @@ const FAQ = () => {
     {
       question: 'Is there a membership fee?',
       answer: 'Details on membership tiers and pricing will be shared during onboarding. We offer flexible options to accommodate businesses of all sizes. Priority early bird rates are available for those who register before the official launch.'
+    },
+    {
+      question: 'How does the movement impact the wider community?',
+      answer: 'Beyond business growth, we are deeply committed to social impact. A key milestone of our movement is having successfully funded and impacted over 100+ children, providing crucial education funds and resources supporting rural and special needs youth.'
     }
   ];
 

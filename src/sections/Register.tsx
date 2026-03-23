@@ -96,12 +96,10 @@ const Register = () => {
   };
 
   const benefits = [
-    'Direct access to global mentors & advisors',
-    'Quarterly business growth sessions',
-    'Strategic partnership opportunities',
-    'Business certification & recognition',
-    'Media visibility & thought leadership',
-    'Investment-ready acceleration program'
+    'Business opportunities in new markets and new income streams.',
+    'Access to global mentors and complimentary consultations.',
+    'Over 50 hours of free learnings with Q&A sessions.',
+    'Invites to online and in-person networking sessions.'
   ];
 
   const interestOptions = [
@@ -134,12 +132,12 @@ const Register = () => {
           <div className="w-20 h-20 mx-auto bg-[#6B2D8C] rounded-2xl flex items-center justify-center text-white mb-8 shadow-xl shadow-purple-500/30 animate-float transform rotate-3 hover:rotate-6 transition-transform">
             <Calendar size={32} />
           </div>
-          <h2 className="text-5xl md:text-7xl font-serif text-white mb-6">Ready for 2026?</h2>
-          <p className="text-slate-300 mb-4 text-xl max-w-2xl mx-auto">
-            <span className="text-[#D4AF37] font-bold">Business C-Nergy & Grow Movement 2026</span>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6">Ready for Quantum Leap in Your Business?</h2>
+          <p className="text-slate-300 mb-4 text-xl md:text-2xl max-w-4xl mx-auto">
+            <span className="text-[#D4AF37] font-bold">Be a Part of the Movement and Accelerate Your Growth!</span>
           </p>
-          <p className="text-slate-400 text-lg max-w-4xl mx-auto">
-            🟣 <strong>30+ Inspirational Global Mentors</strong> | 🟣 <strong>20 LIVE Learning Power Break Sessions</strong> | 🟣 <strong>5000+ Business Leaders Impacted</strong> | 🟣 <strong>400+ Business Projects Matched</strong> | 🟣 <strong>80+ Organizations Scaled</strong> | 🟣 <strong>100+ Children Funded for Education</strong>
+          <p className="text-white font-bold tracking-widest uppercase text-lg max-w-4xl mx-auto mt-6 bg-white/10 py-3 rounded-full border border-white/20">
+            FREE Signup for Value worth Thousands of Dollars
           </p>
         </Reveal>
 
