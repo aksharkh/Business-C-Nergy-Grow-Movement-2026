@@ -38,7 +38,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors">
-             <Phone size={14} /> +65 89347277 / +6016341 7511
+             <Phone size={14} /> +65 8934 7277 / +60 16341 7511
           </div>
           <div className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors">
              <Mail size={14} /> Bizcnergy@gmail.com

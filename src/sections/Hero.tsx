@@ -5,8 +5,22 @@ import GroupPhoto from '../assets/groupphoto.jpeg'
 
 const Hero = () => {
   return (
-    <header className="relative min-h-screen pt-22 pb-20 flex flex-col justify-center overflow-hidden">
-      <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <header className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-[#faf5ff]">
+      {/* Background Decor */}
+      <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-[#6B2D8C]/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      <div className="absolute bottom-0 left-0 w-[50vw] h-[50vw] bg-[#D4AF37]/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+      {/* Group Photo Watermark Full Screen Bleed */}
+      <div 
+        className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] opacity-30 mix-blend-multiply bg-cover bg-left pointer-events-none z-0" 
+        style={{ 
+          backgroundImage: `url(${GroupPhoto})`,
+          maskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 100%)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 100%)'
+        }}
+      />
+
+      <div className="max-w-[1800px] w-full mx-auto px-6 lg:px-16 2xl:px-24 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-8">
           <Reveal direction="down">
             <div className="inline-flex items-center gap-3 border border-white/60 px-4 py-2 rounded-full mb-10 bg-white/40 backdrop-blur-md shadow-sm hover:shadow-lg transition-all cursor-default">
@@ -19,7 +33,7 @@ const Hero = () => {
           </Reveal>
 
           <Reveal delay={200}>
-            <h1 className="text-[10vw] lg:text-[6vw] font-serif leading-[0.9] tracking-tight text-[#2D1B3D] mb-8 drop-shadow-sm">
+            <h1 className="text-[10vw] lg:text-[5vw] xl:text-[85px] 2xl:text-[96px] whitespace-nowrap lg:whitespace-normal font-serif leading-[0.9] tracking-tight text-[#2D1B3D] mb-8 drop-shadow-sm">
               Business C-Nergy & <br />
               <span className="text-[#6B2D8C] italic pr-4 relative inline-block">
                 Growth Movement
@@ -55,12 +69,6 @@ const Hero = () => {
         </div>
 
         <div className="lg:col-span-4 lg:border-l lg:border-slate-300/50 lg:pl-12 lg:h-full flex flex-col justify-center pb-4 relative">
-          {/* Group Photo Watermark */}
-          <div 
-            className="absolute inset-0 opacity-10 mix-blend-multiply bg-cover bg-center rounded-3xl" 
-            style={{ backgroundImage: `url(${GroupPhoto})` }}
-          />
-          
           <Reveal delay={600} direction="left">
             <div className="relative h-96">
               

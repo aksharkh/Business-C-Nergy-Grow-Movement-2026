@@ -14,7 +14,7 @@ const Mentors = () => {
         </Reveal>
         <Reveal delay={50} className="mb-20">
           <p className="text-slate-600 text-lg max-w-2xl">
-            Learn from global thought leaders committed to conscious capitalism and sustainable growth
+            With <strong>100+</strong> Collective Years of Experience in Transforming Businesses & Impacting lives Globally
           </p>
         </Reveal>
 
