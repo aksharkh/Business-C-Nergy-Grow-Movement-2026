@@ -13,6 +13,8 @@ import Register from './sections/Register';
 import Partners from './sections/Partners';
 import Footer from './sections/Footer';
 // import ComingSoon from './sections/ComingSoon';
+
+import { Analytics } from "@vercel/analytics/react"
 import './App.css';
 
 function App() {
@@ -20,6 +22,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <Preloader />
       {/* <ComingSoon /> */}
 
