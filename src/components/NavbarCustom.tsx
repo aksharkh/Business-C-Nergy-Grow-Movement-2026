@@ -1,7 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { navLinks } from '../utils/constants';
-import logo from '../assets/logo.jpeg'
+import logo from '../assets/companyLogos/logo.jpeg'
 
 interface NavbarProps {
   scrollY?: number;

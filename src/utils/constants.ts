@@ -1,8 +1,8 @@
-import DoriaCordova from '../assets/Doria-Cordova-Yellow-Sitting-BEST.jpg';
-import YPLai from '../assets/Mr. YP Lai.jpg';
-import KCSee from '../assets/Mr. KC See.png';
-import GunterConrad from '../assets/Mr Guntur conard.webp';
-import Gina from '../assets/Gina.jpeg';
+import DoriaCordova from '../assets/mentors/Doria-Cordova-Yellow-Sitting-BEST.jpg';
+import YPLai from '../assets/mentors/Mr. YP Lai.jpg';
+import KCSee from '../assets/mentors/Mr. KC See.png';
+import GunterConrad from '../assets/mentors/Mr Guntur conard.webp';
+import Gina from '../assets/mentors/Gina.jpeg';
 
 // Color Scheme - Purple, White & Gold
 export const colors = {
@@ -29,36 +29,81 @@ export const mentorsData = [
     name: 'Dame Doria Cordova', 
     role: 'Excellerated Business School, USA', 
     bio: 'Founder and CEO of Excellerated Business School. Pioneer in conscious business education with 30+ years of experience transforming entrepreneurs into leaders.',
-    linkedin: 'https://www.linkedin.com/in/dccordova/', 
-    photo: DoriaCordova 
+    linkedin: 'https://www.linkedin.com/in/dccordova/',
+    photo: DoriaCordova,
+    flag: '🇺🇸'
   },
   { 
     name: 'Mr YP Lai', 
     role: 'Work Less Earn More Academy, Malaysia - Australia', 
     bio: 'Business strategist helping entrepreneurs create scalable, sustainable businesses that generate wealth while maintaining work-life balance.',
     linkedin: 'https://www.linkedin.com/in/yplai/', 
-    photo: YPLai 
+    photo: YPLai,
+    flag: '🇲🇾'
   },
   { 
     name: 'Mr KC See', 
     role: 'Quest AI, Malaysia', 
     bio: 'Technology innovator and AI expert. Empowering businesses in Southeast Asia to leverage AI for growth and competitive advantage.',
     linkedin: 'https://www.linkedin.com/in/kcsee/', 
-    photo: KCSee 
+    photo: KCSee,
+    flag: '🇲🇾'
   },
   { 
     name: 'Mr Gunter Conrad', 
     role: 'Business Advisor, Germany', 
     bio: 'Global business strategist with expertise in European-Asian market bridges. Facilitates cross-border investments and strategic partnerships.',
     linkedin: 'https://www.linkedin.com/in/g%C3%BCnter-conrad-82655067/', 
-    photo: GunterConrad 
+    photo: GunterConrad,
+    flag: '🇩🇪'
   },
   { 
     name: 'Ms Gina', 
     role: 'Impact Leader, Malaysia', 
     bio: 'Advocate for conscious business and sustainable development. Connects passionate entrepreneurs with impact-driven investment opportunities.',
     linkedin: 'https://www.linkedin.com/in/gina-phan/', 
-    photo: Gina
+    photo: Gina,
+    flag: '🇲🇾'
+  },
+   { 
+    name: 'Dame Doria Cordova', 
+    role: 'Excellerated Business School, USA', 
+    bio: 'Founder and CEO of Excellerated Business School. Pioneer in conscious business education with 30+ years of experience transforming entrepreneurs into leaders.',
+    linkedin: 'https://www.linkedin.com/in/dccordova/',
+    photo: DoriaCordova,
+    flag: '🇺🇸'
+  },
+  { 
+    name: 'Mr YP Lai', 
+    role: 'Work Less Earn More Academy, Malaysia - Australia', 
+    bio: 'Business strategist helping entrepreneurs create scalable, sustainable businesses that generate wealth while maintaining work-life balance.',
+    linkedin: 'https://www.linkedin.com/in/yplai/', 
+    photo: YPLai,
+    flag: '🇲🇾'
+  },
+  { 
+    name: 'Mr KC See', 
+    role: 'Quest AI, Malaysia', 
+    bio: 'Technology innovator and AI expert. Empowering businesses in Southeast Asia to leverage AI for growth and competitive advantage.',
+    linkedin: 'https://www.linkedin.com/in/kcsee/', 
+    photo: KCSee,
+    flag: '🇲🇾'
+  },
+  { 
+    name: 'Mr Gunter Conrad', 
+    role: 'Business Advisor, Germany', 
+    bio: 'Global business strategist with expertise in European-Asian market bridges. Facilitates cross-border investments and strategic partnerships.',
+    linkedin: 'https://www.linkedin.com/in/g%C3%BCnter-conrad-82655067/', 
+    photo: GunterConrad,
+    flag: '🇩🇪'
+  },
+  { 
+    name: 'Ms Gina', 
+    role: 'Impact Leader, Malaysia', 
+    bio: 'Advocate for conscious business and sustainable development. Connects passionate entrepreneurs with impact-driven investment opportunities.',
+    linkedin: 'https://www.linkedin.com/in/gina-phan/', 
+    photo: Gina,
+    flag: '🇲🇾'
   },
 ];
 

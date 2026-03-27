@@ -1,4 +1,5 @@
 import useScroll from './hooks/useScroll';
+import Preloader from './components/Preloader';
 import BackgroundGradients from './components/BackgroundGradients';
 import NavbarCustom from './components/NavbarCustom';
 import Hero from './sections/Hero';
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <>
+      <Preloader />
       {/* <ComingSoon /> */}
 
       <div className="bg-[#f0f4f8] text-slate-900 font-sans selection:bg-[#6B2D8C] selection:text-white overflow-x-hidden relative">

@@ -1,4 +1,4 @@
-import logo from '../assets/logo.jpeg';
+import logo from '../assets/companyLogos/logo.jpeg';
 import { Linkedin, Facebook, Phone, Mail } from 'lucide-react';
 
 
@@ -19,10 +19,10 @@ const Footer = () => {
         </div>
 
         <div className="flex gap-8 text-xs font-bold uppercase tracking-widest mt-6 md:mt-0 items-center justify-center border-t md:border-t-0 border-white/10 pt-6 md:pt-0 w-full md:w-auto">
-          <a href="#" className="hover:text-[#D4AF37] transition-colors">
+          <a className="hover:text-[#D4AF37] transition-colors cursor-pointer">
             Privacy
           </a>
-          <a href="#" className="hover:text-[#D4AF37] transition-colors">
+          <a className="hover:text-[#D4AF37] transition-colors cursor-pointer">
             Terms
           </a>
         </div>
