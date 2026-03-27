@@ -84,7 +84,7 @@ const SectionLabel = ({ title }: { title: string }) => (
 
 // Dynamic Auto-Wrappable Honeycomb generator for ANY array size!
 const renderHoneycomb = (items: string[], pattern: number[]) => {
-  const rows = [];
+  const rows: { items: string[]; forceShift: boolean }[] = [];
   let itemIdx = 0;
   let patternIdx = 0;
   while (itemIdx < items.length) {
