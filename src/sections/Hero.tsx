@@ -12,7 +12,7 @@ const Hero = () => {
 
       {/* Group Photo Watermark Full Screen Bleed */}
       <div 
-        className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] opacity-30 mix-blend-multiply bg-cover bg-left pointer-events-none z-0" 
+        className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] opacity-60 mix-blend-multiply bg-cover bg-left pointer-events-none z-0" 
         style={{ 
           backgroundImage: `url(${GroupPhoto})`,
           maskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 100%)',
@@ -68,41 +68,49 @@ const Hero = () => {
           </Reveal>
         </div>
 
-        <div className="lg:col-span-4 lg:border-l lg:border-slate-300/50 lg:pl-12 lg:h-full flex flex-col justify-center pb-4 relative">
-          <Reveal delay={600} direction="left">
-            <div className="relative h-96">
-              
-
-              {/* First Card - Left */}
-              <div className="absolute -top-10 left-0 group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-40 hover:shadow-xl hover:shadow-purple-500/20 animate-float">
-                <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
-                  30+
-                </div>
-                <div className="text-xs text-slate-600 uppercase tracking-widest group-hover:text-black transition-colors">
-                  Global Mentors
-                </div>
+        <div className="hidden lg:flex lg:col-span-4 lg:border-l lg:border-slate-300/50 lg:pl-12 h-full flex-col justify-center relative min-h-[600px]">
+          <Reveal delay={600} direction="left" className="w-full h-full relative">
+            
+            {/* First Card - Top Left */}
+            <div className="absolute top-[5%] left-[0%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/20 animate-float z-10">
+              <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
+                50+
               </div>
-              
-              {/* Second Card - Right */}
-              <div className="absolute top-50 right-0 group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-40 hover:shadow-xl hover:shadow-purple-500/20 animate-float-reverse" style={{ animationDelay: '1s' }}>
-                <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
-                  5000+
-                </div>
-                <div className="text-xs text-slate-600 uppercase tracking-widest group-hover:text-black transition-colors">
-                  Leaders Impacted
-                </div>
-              </div>
-
-              {/* Third Card - Left */}
-              <div className="absolute -bottom-30 left-6 group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-40 hover:shadow-xl hover:shadow-purple-500/20 animate-float" style={{ animationDelay: '2s' }}>
-                <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
-                  400+
-                </div>
-                <div className="text-xs text-slate-600 uppercase tracking-widest group-hover:text-black transition-colors">
-                  Projects Matched
-                </div>
+              <div className="text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
+                Global<br/>Mentors
               </div>
             </div>
+            
+            {/* Second Card - Middle Right */}
+            <div className="absolute top-[28%] right-[0%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/20 animate-float-reverse z-10" style={{ animationDelay: '0.5s' }}>
+              <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
+                20+
+              </div>
+              <div className="text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
+                Countries<br/>(Leaders)
+              </div>
+            </div>
+
+            {/* Third Card - Lower Left */}
+            <div className="absolute top-[55%] left-[5%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/20 animate-float z-10" style={{ animationDelay: '1s' }}>
+              <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
+                10+
+              </div>
+              <div className="text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
+                Countries<br/>(Investors)
+              </div>
+            </div>
+            
+            {/* Fourth Card - Bottom Right */}
+            <div className="absolute top-[78%] right-[5%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/20 animate-float-reverse z-10" style={{ animationDelay: '1.5s' }}>
+              <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
+                100+
+              </div>
+              <div className="text-[10px] sm:text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
+                Hours Learning<br/>Experience
+              </div>
+            </div>
+
           </Reveal>
         </div>
       </div>

@@ -14,6 +14,7 @@ const Register = () => {
     yearsInBusiness: '',
     interest: 'Business Leaders who want to participate & stay updated with movement',
     referral: '',
+    readiness: '',
     consent: false,
   });
 
@@ -53,13 +54,17 @@ const Register = () => {
         throw new Error('Google Apps Script URL not configured. Please set VITE_GOOGLE_APPS_SCRIPT_URL in .env.local');
       }
 
-      const response = await fetch(scriptUrl, {
+      const sheetName = 'Business C-Nergy 2026 Registrations';
+      const encodedSheet = encodeURIComponent(sheetName);
+      const targetUrl = `${scriptUrl}?sheetName=${encodedSheet}&sheet=${encodedSheet}`;
+
+      const response = await fetch(targetUrl, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'text/plain',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, sheetName, sheet: sheetName }),
       });
 
       // With no-cors mode, assume success if no error
@@ -78,6 +83,7 @@ const Register = () => {
         yearsInBusiness: '',
         interest: 'Business Leaders who want to participate & stay updated with movement',
         referral: '',
+        readiness: '',
         consent: false,
       });
       
@@ -108,6 +114,14 @@ const Register = () => {
     'Service Provider to SMEs - Corporates : F&B, Digital Marketing, Corporate Gifts, etc.',
     'International Professional Trainers and Consultants',
     'Other'
+  ];
+
+  const readinessOptions = [
+    'Learning and get access to all the FREE online sessions',
+    'Attending Online & In-Person Business C-nergy & Growth Conference with Business Matching & Deal making potential',
+    'Participating in Expo and showcase my business and get partners in new markets',
+    'Consulting to expand new markets / Raise Fund for my business',
+    'All of the above'
   ];
 
   return (
@@ -265,9 +279,9 @@ const Register = () => {
                   />
                 </div>
                 <div className="group">
-                  <label htmlFor="interest" className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
-                    Interest to Participate as *
-                  </label>
+                <label htmlFor="interest" className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
+                  Interest to Participate as *
+                </label>
                   <select
                     id="interest"
                     name="interest"
@@ -301,6 +315,30 @@ const Register = () => {
                   className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white text-base focus:ring-2 focus:ring-[#6B2D8C] focus:bg-white/10 focus:border-white/30 outline-none transition-all placeholder-white/30 group-hover:border-white/20 disabled:opacity-50 disabled:cursor-not-allowed"
                   placeholder="Who referred you?"
                 />
+              </div>
+
+              {/* Readiness Options */}
+              <div className="mb-6 group">
+                <label className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
+                  I am ready for: *
+                </label>
+                <div className="space-y-3">
+                  {readinessOptions.map((option, idx) => (
+                    <label key={idx} className="flex items-start gap-3 p-3 bg-white/5 rounded-lg border border-white/10 hover:border-white/30 transition-colors cursor-pointer">
+                      <input
+                        type="radio"
+                        name="readiness"
+                        value={option}
+                        checked={formData.readiness === option}
+                        onChange={handleChange}
+                        required
+                        disabled={isLoading}
+                        className="w-5 h-5 rounded-full border-white/30 text-[#6B2D8C] focus:ring-2 focus:ring-[#6B2D8C] mt-0.5 cursor-pointer accent-[#6B2D8C] disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
+                      />
+                      <span className="text-white text-sm">{option}</span>
+                    </label>
+                  ))}
+                </div>
               </div>
 
               {/* Consent Checkbox */}

@@ -107,6 +107,19 @@ export const mentorsData = [
   },
 ];
 
+export const galleryData = [
+  { img: DoriaCordova, title: "Global Leadership Summit", year: "2023" },
+  { img: YPLai, title: "Business Matching Asia", year: "2024" },
+  { img: KCSee, title: "Tech & Innovation Meet", year: "2023" },
+  { img: GunterConrad, title: "European Investment Forum", year: "2022" },
+  { img: Gina, title: "Impact Makers Retreat", year: "2024" },
+  { img: DoriaCordova, title: "Conscious Business Kickoff", year: "2021" },
+  { img: YPLai, title: "Wealth & Growth Summit", year: "2024" },
+  { img: KCSee, title: "AI Enterprise Expo", year: "2023" },
+  { img: GunterConrad, title: "Cross-border Synergy", year: "2022" },
+  { img: Gina, title: "Sustainable Development Connect", year: "2023" },
+];
+
 // Navigation Links
 export const navLinks = [
   { label: 'About', href: '#about' },

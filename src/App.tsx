@@ -8,6 +8,7 @@ import Impact from './sections/Impact';
 import About from './sections/About';
 import Events from './sections/Events';
 import Mentors from './sections/Mentors';
+import Gallery from './sections/Gallery';
 import FAQ from './sections/FAQ';
 import Register from './sections/Register';
 import Partners from './sections/Partners';
@@ -38,6 +39,7 @@ function App() {
           <About />
           <Events />
           <Mentors />
+          <Gallery />
           <FAQ />
           <Register />
           <Partners />
