@@ -20,16 +20,18 @@ const ComingSoon = () => {
         throw new Error('Google Apps Script URL not configured.');
       }
 
-      const targetUrl = `${scriptUrl}?sheetName=Sheet2&sheet=Sheet2`;
+      const sheetName = 'Notify mails from coming soon page';
+      const encodedSheet = encodeURIComponent(sheetName);
+      const targetUrl = `${scriptUrl}?sheetName=${encodedSheet}&sheet=${encodedSheet}`;
 
-      // Sending sheetName: 'Sheet2' along with the email payload
+      // Sending sheetName along with the email payload
       await fetch(targetUrl, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'text/plain',
         },
-        body: JSON.stringify({ email, sheetName: 'Sheet2', sheet: 'Sheet2' }),
+        body: JSON.stringify({ email, sheetName: sheetName, sheet: sheetName }),
       });
 
       setStatus('success');
