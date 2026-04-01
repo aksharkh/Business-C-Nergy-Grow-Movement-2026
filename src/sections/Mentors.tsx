@@ -2,8 +2,6 @@ import Reveal from '../components/Reveal';
 import { mentorsData } from '../utils/constants';
 import { useRef, useState, forwardRef } from 'react';
 
-const reversedMentors = [...mentorsData].reverse();
-
 const MentorCard = ({ mentor }: { mentor: any }) => (
   <a 
     href={mentor.linkedin} 
@@ -30,21 +28,24 @@ const MentorCard = ({ mentor }: { mentor: any }) => (
       <h3 className="text-lg md:text-xl font-bold font-sans text-[#2D1B3D] group-hover:text-[#6B2D8C] tracking-widest uppercase mb-2 transition-colors duration-300">
         {mentor.name}
       </h3>
-      <p className="text-[10px] md:text-xs font-semibold tracking-[0.2em] text-slate-500 group-hover:text-[#D4AF37] uppercase transition-colors duration-300">
+      <p className="text-[10px] md:text-xs font-semibold tracking-[0.2em] text-slate-500 group-hover:text-[#D4AF37] uppercase transition-colors duration-300 whitespace-pre-line">
         {mentor.role}
       </p>
     </div>
   </a>
 );
 
+const firstRow = mentorsData.slice(0, 11);
+const secondRow = mentorsData.slice(11);
+
 // One unified block containing exactly both rows so they scroll flawlessly together
 const MentorsBlock = forwardRef<HTMLDivElement, {}>((_, ref) => (
   <div ref={ref} className="flex flex-col gap-12 w-max shrink-0">
     <div className="flex gap-12">
-      {mentorsData.map((m, i) => <MentorCard key={`r1-${i}`} mentor={m} />)}
+      {firstRow.map((m, i) => <MentorCard key={`r1-${i}`} mentor={m} />)}
     </div>
     <div className="flex gap-12">
-      {reversedMentors.map((m, i) => <MentorCard key={`r2-${i}`} mentor={m} />)}
+      {secondRow.map((m, i) => <MentorCard key={`r2-${i}`} mentor={m} />)}
     </div>
   </div>
 ));

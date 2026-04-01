@@ -18,14 +18,14 @@ const Footer = () => {
           <span className="uppercase tracking-widest text-xs text-white">Business C-Nergy 2026</span>
         </div>
 
-        <div className="flex gap-8 text-xs font-bold uppercase tracking-widest mt-6 md:mt-0 items-center justify-center border-t md:border-t-0 border-white/10 pt-6 md:pt-0 w-full md:w-auto">
+        {/* <div className="flex gap-8 text-xs font-bold uppercase tracking-widest mt-6 md:mt-0 items-center justify-center border-t md:border-t-0 border-white/10 pt-6 md:pt-0 w-full md:w-auto">
           <a className="hover:text-[#D4AF37] transition-colors cursor-pointer">
             Privacy
           </a>
           <a className="hover:text-[#D4AF37] transition-colors cursor-pointer">
             Terms
           </a>
-        </div>
+        </div> */}
 
         {/* Contact Info & Socials */}
         <div className="flex flex-col md:flex-row items-center gap-6 text-xs text-slate-400 mt-6 md:mt-0">
@@ -45,6 +45,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p className="text-[10px] uppercase tracking-[0.2em] text-center md:text-left text-slate-500">
+          Copyright and terms are for BlueSantos. © 2026
+        </p>
+        <p className="text-[10px] uppercase tracking-[0.2em] text-center md:text-right text-[#D4AF37]/60 hover:text-[#D4AF37] transition-colors cursor-default">
+          Designed and developed by BlueSantos
+        </p>
+      </div>
+
     </footer>
   );
 };

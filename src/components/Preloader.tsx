@@ -73,11 +73,17 @@ const Preloader = () => {
             ></div>
           </div>
           
-          {/* Progress text ticker */}
           <p className="text-[#D4AF37] font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] mt-6 font-bold flex items-center gap-6">
             <span className="w-12 h-[1px] bg-[#D4AF37]/40 hidden md:block"></span>
             Initializing Experience {Math.floor(progress)}%
             <span className="w-12 h-[1px] bg-[#D4AF37]/40 hidden md:block"></span>
+          </p>
+        </div>
+
+        {/* Developer Attribution */}
+        <div className="absolute -bottom-24 md:-bottom-32 text-center w-full">
+          <p className="text-white/30 hover:text-white/60 transition-colors font-sans text-[8px] md:text-[10px] uppercase tracking-[0.3em]">
+            Designed and developed by BlueSantos
           </p>
         </div>
 
