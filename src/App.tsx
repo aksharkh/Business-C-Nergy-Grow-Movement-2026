@@ -9,7 +9,7 @@ import About from './sections/About';
 import Events from './sections/Events';
 import Mentors from './sections/Mentors';
 import Gallery from './sections/Gallery';
-import FAQ from './sections/FAQ';
+// import FAQ from './sections/FAQ';
 import Register from './sections/Register';
 import Partners from './sections/Partners';
 import Footer from './sections/Footer';
