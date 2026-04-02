@@ -40,7 +40,7 @@ function App() {
           <Events />
           <Mentors />
           <Gallery />
-          <FAQ />
+          {/* <FAQ /> */}
           <Register />
           <Partners />
         </main>

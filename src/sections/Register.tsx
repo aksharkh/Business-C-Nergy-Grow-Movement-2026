@@ -171,7 +171,7 @@ const Register = () => {
         </Reveal>
 
         {/* Impact Metrics */}
-        <Reveal delay={200} direction="up" className="mb-16">
+        {/* <Reveal delay={200} direction="up" className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-[#6B2D8C]/30 border border-[#D4AF37]/30 rounded-2xl p-8 text-center hover:bg-[#6B2D8C]/50 transition-all duration-300">
               <div className="text-5xl font-serif text-[#D4AF37] mb-2">5000+</div>
@@ -186,7 +186,7 @@ const Register = () => {
               <p className="text-white text-sm uppercase tracking-widest">Global Organizations</p>
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
 
         {/* Registration Form */}
         <Reveal delay={300} direction="up">

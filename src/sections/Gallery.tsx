@@ -7,7 +7,7 @@ const Gallery = () => {
   const loopData = [...galleryData, ...galleryData, ...galleryData, ...galleryData];
 
   return (
-    <section id="gallery" className="py-24 bg-[#1b052a] relative overflow-hidden">
+    <section id="gallery" className="py-24 relative overflow-hidden">
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 mb-16 md:mb-24 text-center">
         <Reveal>
           <span className="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs md:text-sm mb-4 block">Capturing the Movement</span>
@@ -63,10 +63,10 @@ const Gallery = () => {
           100% { transform: translateX(0); }
         }
         .animate-marquee-left {
-          animation: marqueeLeft 60s linear infinite;
+          animation: marqueeLeft 90s linear infinite;
         }
         .animate-marquee-right {
-          animation: marqueeRight 60s linear infinite;
+          animation: marqueeRight 90s linear infinite;
         }
       `}} />
 
