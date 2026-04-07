@@ -1,7 +1,8 @@
 import React from 'react';
 import Reveal from '../components/Reveal';
-import logo from '../assets/companyLogos/logo.jpeg';
+import ggschool from '../assets/companyLogos/ggschool.jpeg';
 import ggsolution from '../assets/companyLogos/ggsolution.png';
+import visitmalaysia from '../assets/companyLogos/visitmalaysia.jpeg';
 import borneo from '../assets/companyLogos/borneo.png';
 import workless from '../assets/companyLogos/workless.png';
 import whq from '../assets/companyLogos/whq.png';
@@ -154,7 +155,7 @@ const Partners = () => {
               {/* Top Nodes spaced out horizontally and shifted LEFT as requested */}
               <div className="absolute top-0 translate-x-1/3 -ml-[170px] lg:-ml-[230px] xl:-ml-[300px] flex flex-col items-center">
                 <SectionLabel title="A Project Of" />
-                <Reveal delay={100}><HexagonCard >{logo}</HexagonCard></Reveal>
+                <Reveal delay={100}><HexagonCard >{ggschool}</HexagonCard></Reveal>
               </div>
 
               <div className="absolute top-0 left-1/5 translate-x-1/4 ml-[90px] lg:ml-[110px] xl:ml-[140px] flex flex-col items-center">
@@ -180,16 +181,15 @@ const Partners = () => {
             <SectionLabel title="Jointly Presented By" />
             <Reveal delay={400} className="w-full mb-24">
               <div className="flex justify-center gap-[40px] lg:gap-[50px] xl:gap-[65px]">
+                 <HexagonCard>{<img src={visitmalaysia} alt="Visit Malaysia" className="w-full h-full object-contain p-2" />}</HexagonCard>
                  <HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard>
                  <HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard>
+                 
               </div>
             </Reveal>
 
             <SectionLabel title="Strategic Partners" />
-            {renderHoneycomb([...partnersLists.strategic, "https://upload.wikimedia.org/wikipedia/en/b/bd/Tourism_Malaysia_Logo.png"], [2, 3])}
-            <div className="mt-4">
-              <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Visit Malaysia 2026 Partner</p>
-            </div>
+            {renderHoneycomb(partnersLists.strategic, [2, 3])}
           </div>
 
         </div>
@@ -221,12 +221,13 @@ const Partners = () => {
             <div className="flex justify-center items-center gap-[40px] w-full">
               <HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard>
               <HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard>
+              <HexagonCard>{<img src={visitmalaysia} alt="Visit Malaysia" className="w-full h-full object-contain p-2" />}</HexagonCard>
             </div>
           </Reveal>
 
           <Reveal direction="up" delay={500} className="flex flex-col items-center w-full">
             <SectionLabel title="Strategic Partners" />
-            {renderHoneycomb([...partnersLists.strategic, "https://upload.wikimedia.org/wikipedia/en/b/bd/Tourism_Malaysia_Logo.png"], [3, 2])}
+            {renderHoneycomb(partnersLists.strategic, [3, 2])}
           </Reveal>
 
           <Reveal direction="up" delay={600} className="flex flex-col items-center w-full">

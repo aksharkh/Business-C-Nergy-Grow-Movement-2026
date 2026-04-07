@@ -60,27 +60,27 @@ export const animations = {
 
 // Mentors Data - Strictly Mapped in Explicit Order
 export const mentorsData = [
-  { name: 'Dr.h.c. AZEEZA JALALUDEEN', role: 'Founder - Director\nMovement Lead', photo: Azeez, flag: '🌐', linkedin: '#' },
-  { name: 'CAROL KHOO', role: 'Finance Lead', photo: Carol, flag: '🌐', linkedin: '#' },
-  { name: 'YP LAI', role: 'BNI Global Trainer\nFounder, WLEM Academy\nCo-Organiser BCG Movement', photo: YpLai, flag: '🇲🇾', linkedin: '#' },
-  { name: 'BRANDON CHIN', role: 'Founder & CEO\nBorneo Referral Group Sdn Bhd\nBorneo Expo 2.0\nCo-Partner, BCG Movement', photo: Brandon, flag: '🇲🇾', linkedin: '#' },
-  { name: 'MUHAMMAD IMRAN KUNA', role: 'Founder, Dream to Aspire\nSenior Para Legal', photo: Imran, flag: '🌐', linkedin: '#' },
-  { name: 'FARHTHEEBA RAHAT KHAN', role: 'Marketing Partner\nBangladesh', photo: Rahat, flag: '🇧🇩', linkedin: '#' },
-  { name: 'DAME DORIA CORDOVA', role: 'Mentor of Global Mentors\nCEO & Co-Founder\nExcellerated Business School\nMoney & You Program, USA', photo: Doria, flag: '🇺🇸', linkedin: '#' },
-  { name: 'GUNTER CONRAD', role: 'Global Mentor - Advisor\nBCG Movement\nFounder, GIGA Trend\nGermany', photo: Gunter, flag: '🇩🇪', linkedin: '#' },
-  { name: 'KC SEE', role: 'Global Mentor - Advisor\nBCG Movement\nFounder, Quest Learning\nMastery Asia. Malaysia', photo: KcSee, flag: '🇲🇾', linkedin: '#' },
-  { name: 'WOO HUI QIN', role: 'Program Delivery Lead\nBCG Movement\nFounder, WHQ Learning Hub', photo: Qin, flag: '🌐', linkedin: '#' },
-  { name: 'KONG CHOON YEN', role: 'Founder, Birth Discovery', photo: Yen, flag: '🌐', linkedin: '#' },
-  { name: 'DIVESH SONI', role: 'India Lead, BCG Movement\nFounder, Purpose Genie', photo: Soni, flag: '🇮🇳', linkedin: '#' },
-  { name: 'LLEWELLAN VANCE', role: 'Co-Founder\nAsia Innovate Hub\nAI Native Expert', photo: Vance, flag: '🌐', linkedin: '#' },
-  { name: 'RTN. JENNIFER ISAAC', role: 'Director,\nAuriga Corporate Advisory\nDirector\nCrossAsyst Infotech', photo: Isaac, flag: '🌐', linkedin: '#' },
-  { name: 'Advocate JANI JERMANS', role: 'Tamil Nadu Chapter President\nAsia Africa Chamber of Commerce', photo: Jani, flag: '🇮🇳', linkedin: '#' },
-  { name: 'DEEPAK SHANKARAPA', role: 'Co-Founder\nBlue Santos Pte Ltd\nBusiness Mentor\nGRC Services', photo: Deepak, flag: '🇸🇬', linkedin: '#' },
-  { name: 'Dr. SHINICHI HAMANO', role: 'Director DACACA\nBusiness Mentor\nFinance and F&B', photo: Hamano, flag: '🇯🇵', linkedin: '#' },
-  { name: 'STEVE SAN', role: 'BCG Movement\nLead - Events\nCo-Founder\nBlue Santos Pte Ltd', photo: Steve, flag: '🇸🇬', linkedin: '#' },
-  { name: 'Dr. SIVEM DORAIRAJAH', role: 'Founder, Nivahs Global\nGOGLOBAL Mentor\n& Stragetic Partner\nMalaysia', photo: Sivem, flag: '🇲🇾', linkedin: '#' },
-  { name: 'GREGG JACLIN', role: 'Managing Director\nExchange Listing LLC, USA\nGOGLOBAL Mentor\nIPO & Investment', photo: Gregg, flag: '🇺🇸', linkedin: '#' },
-  { name: 'JEIYAN SATHIASEELAN', role: 'Founder, Beezeebee Hub\nCommunity Partner\nMalaysia', photo: Jeiyan, flag: '🇲🇾', linkedin: '#' }
+  { name: 'Dr.h.c. AZEEZA JALALUDEEN', role: 'Founder - Director\nMovement Lead', photo: Azeez, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/azeezajalaludeen/' },
+  { name: 'CAROL KHOO', role: 'Finance Lead', photo: Carol, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/carol-khoo-005008103/?skipRedirect=true' },
+  { name: 'YP LAI', role: 'BNI Global Trainer\nFounder, WLEM Academy\nCo-Organiser BCG Movement', photo: YpLai, flag: '🇦🇺', linkedin: 'https://www.linkedin.com/in/yplai/' },
+  { name: 'BRANDON CHIN', role: 'Founder & CEO\nBorneo Referral Group Sdn Bhd\nBorneo Expo 2.0\nCo-Partner, BCG Movement', photo: Brandon, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/brandon-chin-sw/' },
+  { name: 'MUHAMMAD IMRAN KUNA', role: 'Founder, Dream to Aspire\nSenior Para Legal', photo: Imran, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/mohammad-imran-kuna-a2276528/' },
+  { name: 'FARHTHEEBA RAHAT KHAN', role: 'Marketing Partner\nBangladesh', photo: Rahat, flag: '🇧🇩', linkedin: 'http://linkedin.com/in/farhtheeba-rahat-khan-06437414/' },
+  { name: 'DAME DORIA CORDOVA', role: 'Mentor of Global Mentors\nCEO & Co-Founder\nExcellerated Business School\nMoney & You Program, USA', photo: Doria, flag: '🇺🇸', linkedin: 'https://www.linkedin.com/in/dccordova/' },
+  { name: 'GUNTER CONRAD', role: 'Global Mentor - Advisor\nBCG Movement\nFounder, GIGA Trend\nGermany', photo: Gunter, flag: '🇩🇪', linkedin: 'https://www.linkedin.com/in/g%C3%BCnter-conrad-82655067/' },
+  { name: 'KC SEE', role: 'Global Mentor - Advisor\nBCG Movement\nFounder, Quest Learning\nMastery Asia. Malaysia', photo: KcSee, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/kcsee/' },
+  { name: 'WOO HUI QIN', role: 'Program Delivery Lead\nBCG Movement\nFounder, WHQ Learning Hub', photo: Qin, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/woohuiqin/?skipRedirect=true' },
+  { name: 'KONG CHOON YEN', role: 'Founder, Birth Discovery', photo: Yen, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/choon-yen-kong-b5562a311/?skipRedirect=true' },
+  { name: 'DIVESH SONI', role: 'India Lead, BCG Movement\nFounder, Purpose Genie', photo: Soni, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/purposegenie-divesh-soni/' },
+  { name: 'LLEWELLAN VANCE', role: 'Co-Founder\nAsia Innovate Hub\nAI Native Expert', photo: Vance, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/llewellan-vance-innovation/' },
+  { name: 'RTN. JENNIFER ISAAC', role: 'Director,\nAuriga Corporate Advisory\nDirector\nCrossAsyst Infotech', photo: Isaac, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/jenniferisaac/' },
+  { name: 'Advocate JANI JERMANS', role: 'Tamil Nadu Chapter President\nAsia Africa Chamber of Commerce', photo: Jani, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/adv-jani-jermans-b-sc-mba-hrm-ll-b-54382837/' },
+  { name: 'DEEPAK SHANKARAPA', role: 'Co-Founder\nBlue Santos Pte Ltd\nBusiness Mentor\nGRC Services', photo: Deepak, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/deepak-reach-grc/' },
+  { name: 'Dr. SHINICHI HAMANO', role: 'Director DACACA\nBusiness Mentor\nFinance and F&B', photo: Hamano, flag: '🇯🇵', linkedin: 'https://www.linkedin.com/in/shinichi-hamano-a809b57/' },
+  { name: 'STEVE SAN', role: 'BCG Movement\nLead - Events\nCo-Founder\nBlue Santos Pte Ltd', photo: Steve, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/stevenathanielsan/' },
+  { name: 'Dr. SIVEM DORAIRAJAH', role: 'Founder, Nivahs Global\nGOGLOBAL Mentor\n& Stragetic Partner\nMalaysia', photo: Sivem, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/sivem-dorairajah-icps-8663902a/' },
+  { name: 'GREGG JACLIN', role: 'Managing Director\nExchange Listing LLC, USA\nGOGLOBAL Mentor\nIPO & Investment', photo: Gregg, flag: '🇺🇸', linkedin: 'https://www.linkedin.com/in/gregg-jaclin-a6835b2/' },
+  { name: 'JEIYAN SATHIASEELAN', role: 'Founder, Beezeebee Hub\nCommunity Partner\nMalaysia', photo: Jeiyan, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/jeiyan-sathiaseelan-34902479/' }
 ];
 
 export const galleryData = [

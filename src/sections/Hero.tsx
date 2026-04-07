@@ -12,7 +12,7 @@ const Hero = () => {
 
       {/* Group Photo Watermark Full Screen Bleed */}
       <div 
-        className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] opacity-60 mix-blend-multiply bg-cover bg-left pointer-events-none z-0" 
+        className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] opacity-90 mix-blend-multiply bg-cover bg-left pointer-events-none z-0" 
         style={{ 
           backgroundImage: `url(${GroupPhoto})`,
           maskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 100%)',

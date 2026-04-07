@@ -32,6 +32,23 @@ const Register = () => {
       const isChecked = (e.target as HTMLInputElement).checked;
       setFormData(prev => {
         const currentReadiness = prev.readiness as string[];
+        
+        // --- SMART LOGIC FOR ALL OF THE ABOVE ---
+        if (value === 'All of the above') {
+          if (isChecked) {
+            // Check all options
+            return { ...prev, readiness: readinessOptions };
+          } else {
+            // Clear all options
+            return { ...prev, readiness: [] };
+          }
+        }
+        
+        // If ALL of the above is currently active, prevent individual unchecking of other items
+        if (currentReadiness.includes('All of the above') && !isChecked) {
+          return prev;
+        }
+
         if (isChecked) {
           return { ...prev, readiness: [...currentReadiness, value] };
         } else {
@@ -291,7 +308,7 @@ const Register = () => {
                     Number of years in Business
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     name="yearsInBusiness"
                     value={formData.yearsInBusiness}
                     onChange={handleChange}
@@ -345,20 +362,37 @@ const Register = () => {
                   I am ready for: *
                 </label>
                 <div className="space-y-3">
-                  {readinessOptions.map((option, idx) => (
-                    <label key={idx} className="flex items-start gap-3 p-3 bg-white/5 rounded-lg border border-white/10 hover:border-white/30 transition-colors cursor-pointer">
-                      <input
-                        type="checkbox"
-                        name="readiness"
-                        value={option}
-                        checked={(formData.readiness as string[]).includes(option)}
-                        onChange={handleChange}
-                        disabled={isLoading}
-                        className="w-5 h-5 rounded border-white/30 text-[#6B2D8C] focus:ring-2 focus:ring-[#6B2D8C] mt-0.5 cursor-pointer accent-[#6B2D8C] disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
-                      />
-                      <span className="text-white text-sm">{option}</span>
-                    </label>
-                  ))}
+                  {readinessOptions.map((option, idx) => {
+                    const isAllSelected = (formData.readiness as string[]).includes('All of the above');
+                    const isCheckable = !isAllSelected || option === 'All of the above';
+                    
+                    return (
+                      <label 
+                        key={idx} 
+                        className={`flex items-start gap-3 p-3 rounded-lg border transition-all cursor-pointer ${
+                          !isCheckable ? 'bg-white/10 opacity-60 cursor-not-allowed border-white/30' : 'bg-white/5 border-white/10 hover:border-white/30'
+                        }`}
+                      >
+                        <input
+                          type="checkbox"
+                          name="readiness"
+                          value={option}
+                          checked={(formData.readiness as string[]).includes(option)}
+                          onChange={handleChange}
+                          disabled={isLoading || (!isCheckable && option !== 'All of the above')}
+                          className={`w-5 h-5 rounded border-white/30 text-[#6B2D8C] focus:ring-2 focus:ring-[#6B2D8C] mt-0.5 cursor-pointer accent-[#6B2D8C] disabled:opacity-50 shrink-0 ${
+                            !isCheckable ? 'opacity-40' : ''
+                          }`}
+                        />
+                        <div className="flex flex-col">
+                          <span className="text-white text-sm">{option}</span>
+                          {!isCheckable && option !== 'All of the above' && (
+                            <span className="text-[10px] text-[#D4AF37] opacity-60">Already selected via 'All of the above'</span>
+                          )}
+                        </div>
+                      </label>
+                    );
+                  })}
                 </div>
               </div>
 
