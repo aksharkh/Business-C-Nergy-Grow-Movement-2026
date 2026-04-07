@@ -108,7 +108,7 @@ export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Impact', href: '#impact' },
   { label: 'Mentors', href: '#mentors' },
-  { label: 'FAQ', href: '#faq' },
+  // { label: 'FAQ', href: '#faq' },
   { label: 'Register', href: '#register' },
 ];
 

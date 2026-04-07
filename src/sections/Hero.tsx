@@ -28,10 +28,10 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#6B2D8C] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#6B2D8C]"></span>
               </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#2D1B3D]">🇲🇾 Visit Malaysia 2026 Partner</span>
+              <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#2D1B3D]">A Project of SHINE GOGLOBAL</span>
             </div>
           </Reveal>
-
+ 
           <Reveal delay={200}>
             <h1 className="text-[10vw] lg:text-[5vw] xl:text-[85px] 2xl:text-[96px] whitespace-nowrap lg:whitespace-normal font-serif leading-[0.9] tracking-tight text-[#2D1B3D] mb-8 drop-shadow-sm">
               Business C-Nergy & <br />
@@ -49,7 +49,7 @@ const Hero = () => {
               Are you Ready for a <strong>New Wave Of Possibilities and Exponential Leap</strong> for your Business - Life and Impact in 2026 and Beyond from/in Malaysia Going Global!
             </p>
             <p className="block text-base md:text-lg font-sans font-light tracking-wide text-slate-700 mt-6 leading-relaxed max-w-4xl border-l-4 border-[#D4AF37] pl-6 bg-white/40 backdrop-blur-sm py-4 pr-4 rounded-r-xl hover:bg-white/60 transition-all duration-300">
-              <strong className="text-[#6B2D8C]">Business C-Nergy & Growth Movement 2026</strong> - Conscious Co-Creationg and Bridging to Impact Capital, a regional transformation initiative for the collective economic growth of businesses in the region – Economic Footprint Forward.
+              <strong className="text-[#6B2D8C]">Business C-Nergy & Growth Movement 2026</strong> - Conscious Co-Creating and Bridging to Impact Capital, a regional transformation initiative for the collective economic growth of businesses in the region – Economic Footprint Forward.
             </p>
           </Reveal>
 

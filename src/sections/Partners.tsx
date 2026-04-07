@@ -175,20 +175,20 @@ const Partners = () => {
             </div>
           </div>
 
-          {/* RIGHT CLUSTER: Strategic Partners */}
+          {/* RIGHT CLUSTER: Partners Cluster */}
           <div className="col-span-4 flex flex-col items-center relative z-10 w-full pt-16">
-            <SectionLabel title="Strategic Partners" />
-            {renderHoneycomb(partnersLists.strategic, [2, 3])}
+            <SectionLabel title="Jointly Presented By" />
+            <Reveal delay={400} className="w-full mb-24">
+              <div className="flex justify-center gap-[40px] lg:gap-[50px] xl:gap-[65px]">
+                 <HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard>
+                 <HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard>
+              </div>
+            </Reveal>
 
-            {/* Moved Jointly Presented By from the Center column to the bottom of this Right column! */}
-            <div className="mt-24 flex flex-col items-center w-full">
-              <SectionLabel title="Jointly Presented By" />
-              <Reveal delay={400} className="w-full">
-                <div className="flex justify-center gap-[40px] lg:gap-[50px] xl:gap-[65px]">
-                   <HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard>
-                   <HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard>
-                </div>
-              </Reveal>
+            <SectionLabel title="Strategic Partners" />
+            {renderHoneycomb([...partnersLists.strategic, "https://upload.wikimedia.org/wikipedia/en/b/bd/Tourism_Malaysia_Logo.png"], [2, 3])}
+            <div className="mt-4">
+              <p className="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Visit Malaysia 2026 Partner</p>
             </div>
           </div>
 
@@ -216,15 +216,17 @@ const Partners = () => {
             </Reveal>
           </div>
 
-          <Reveal direction="up" delay={500} className="flex flex-col items-center w-full">
-            <SectionLabel title="Strategic Partners" />
-            {renderHoneycomb(partnersLists.strategic, [2, 3])}
-          </Reveal>
-          
-          {/* Shifted this block under Strategic for mobile as well to match Desktop flow */}
           <Reveal direction="up" delay={400} className="flex flex-col items-center w-full">
             <SectionLabel title="Jointly Presented By" />
-            <div className="flex justify-center items-center gap-[40px] w-full"><HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard><HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard></div>
+            <div className="flex justify-center items-center gap-[40px] w-full">
+              <HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard>
+              <HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard>
+            </div>
+          </Reveal>
+
+          <Reveal direction="up" delay={500} className="flex flex-col items-center w-full">
+            <SectionLabel title="Strategic Partners" />
+            {renderHoneycomb([...partnersLists.strategic, "https://upload.wikimedia.org/wikipedia/en/b/bd/Tourism_Malaysia_Logo.png"], [3, 2])}
           </Reveal>
 
           <Reveal direction="up" delay={600} className="flex flex-col items-center w-full">

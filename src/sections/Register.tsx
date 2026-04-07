@@ -14,7 +14,7 @@ const Register = () => {
     yearsInBusiness: '',
     interest: 'Business Leaders who want to participate & stay updated with movement',
     referral: '',
-    readiness: '',
+    readiness: [] as string[],
     consent: false,
   });
 
@@ -27,6 +27,20 @@ const Register = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target as any;
+    
+    if (name === 'readiness' && type === 'checkbox') {
+      const isChecked = (e.target as HTMLInputElement).checked;
+      setFormData(prev => {
+        const currentReadiness = prev.readiness as string[];
+        if (isChecked) {
+          return { ...prev, readiness: [...currentReadiness, value] };
+        } else {
+          return { ...prev, readiness: currentReadiness.filter(item => item !== value) };
+        }
+      });
+      return;
+    }
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
@@ -58,13 +72,21 @@ const Register = () => {
       const encodedSheet = encodeURIComponent(sheetName);
       const targetUrl = `${scriptUrl}?sheetName=${encodedSheet}&sheet=${encodedSheet}`;
 
+      const payload = {
+        ...formData,
+        whatsapp: `"${formData.whatsapp}"`,
+        readiness: Array.isArray(formData.readiness) ? formData.readiness.join(', ') : formData.readiness,
+        sheetName,
+        sheet: sheetName
+      };
+
       const response = await fetch(targetUrl, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'text/plain',
         },
-        body: JSON.stringify({ ...formData, sheetName, sheet: sheetName }),
+        body: JSON.stringify(payload),
       });
 
       // With no-cors mode, assume success if no error
@@ -83,7 +105,7 @@ const Register = () => {
         yearsInBusiness: '',
         interest: 'Business Leaders who want to participate & stay updated with movement',
         referral: '',
-        readiness: '',
+        readiness: [],
         consent: false,
       });
       
@@ -242,7 +264,7 @@ const Register = () => {
                     required
                     disabled={isLoading}
                     className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white text-base focus:ring-2 focus:ring-[#6B2D8C] focus:bg-white/10 focus:border-white/30 outline-none transition-all placeholder-white/30 group-hover:border-white/20 disabled:opacity-50 disabled:cursor-not-allowed"
-                    placeholder="+60 123456789"
+                    placeholder="60 123456789"
                   />
                 </div>
                 <div className="group">
@@ -326,14 +348,13 @@ const Register = () => {
                   {readinessOptions.map((option, idx) => (
                     <label key={idx} className="flex items-start gap-3 p-3 bg-white/5 rounded-lg border border-white/10 hover:border-white/30 transition-colors cursor-pointer">
                       <input
-                        type="radio"
+                        type="checkbox"
                         name="readiness"
                         value={option}
-                        checked={formData.readiness === option}
+                        checked={(formData.readiness as string[]).includes(option)}
                         onChange={handleChange}
-                        required
                         disabled={isLoading}
-                        className="w-5 h-5 rounded-full border-white/30 text-[#6B2D8C] focus:ring-2 focus:ring-[#6B2D8C] mt-0.5 cursor-pointer accent-[#6B2D8C] disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
+                        className="w-5 h-5 rounded border-white/30 text-[#6B2D8C] focus:ring-2 focus:ring-[#6B2D8C] mt-0.5 cursor-pointer accent-[#6B2D8C] disabled:opacity-50 disabled:cursor-not-allowed shrink-0"
                       />
                       <span className="text-white text-sm">{option}</span>
                     </label>
