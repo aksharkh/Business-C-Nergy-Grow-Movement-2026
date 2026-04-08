@@ -398,6 +398,8 @@ const Register = () => {
                 </div>
               </div>
 
+
+
               {/* Consent Checkbox */}
               <div className="mb-8 flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/10">
                 <input
