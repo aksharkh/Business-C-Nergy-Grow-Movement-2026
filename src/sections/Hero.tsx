@@ -12,7 +12,7 @@ const Hero = () => {
 
       {/* Group Photo Watermark Full Screen Bleed */}
       <div 
-        className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] opacity-90 mix-blend-multiply bg-cover bg-left pointer-events-none z-0" 
+        className="absolute top-0 bottom-0 right-0 w-full lg:w-[65%] opacity-80 mix-blend-multiply bg-cover bg-left pointer-events-none z-0" 
         style={{ 
           backgroundImage: `url(${GroupPhoto})`,
           maskImage: 'linear-gradient(to right, transparent 0%, black 25%, black 100%)',
@@ -49,7 +49,7 @@ const Hero = () => {
               Are you Ready for a <strong>New Wave Of Possibilities and Exponential Leap</strong> for your Business - Life and Impact in 2026 and Beyond from/in Malaysia Going Global!
             </p>
             <p className="block text-base md:text-lg font-sans font-light tracking-wide text-slate-700 mt-6 leading-relaxed max-w-4xl border-l-4 border-[#D4AF37] pl-6 bg-white/40 backdrop-blur-sm py-4 pr-4 rounded-r-xl hover:bg-white/60 transition-all duration-300">
-              <strong className="text-[#6B2D8C]">Business C-Nergy & Growth Movement 2026</strong> - Conscious Co-Creating and Bridging to Impact Capital, a regional transformation initiative for the collective economic growth of businesses in the region – Economic Footprint Forward.
+              <strong className="text-[#6B2D8C]">Business C-Nergy & Growth Movement 2026</strong> - Conscious Co-Creation and Bridging to Impact Capital, a regional transformation initiative for the collective economic growth of businesses in the region – Economic Footprint Forward.
             </p>
           </Reveal>
 
@@ -104,7 +104,7 @@ const Hero = () => {
             {/* Fourth Card - Bottom Right */}
             <div className="absolute top-[78%] right-[5%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/20 animate-float-reverse z-10" style={{ animationDelay: '1.5s' }}>
               <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
-                100+
+                10,000+
               </div>
               <div className="text-[10px] sm:text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
                 Hours Learning<br/>Experience

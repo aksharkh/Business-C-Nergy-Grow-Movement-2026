@@ -32,6 +32,7 @@ import institute from '../assets/companyLogos/institute.png';
 import globalsparks from '../assets/companyLogos/globalsparks.png';
 import kon from '../assets/companyLogos/kon.png';
 import ssacci from '../assets/companyLogos/ssacci.png';
+import supportingsabah from '../assets/companyLogos/supportingsabah.svg';
 // import shine from '../assets/companyLogos/shine.png';
 // import companyofgood from '../assets/companyLogos/companyofgood.png';
 
@@ -46,32 +47,64 @@ const partnersLists = {
   strategic: logos.slice(22, 29)
 };
 
-const HexagonCard = ({ children, isDark = false, isLarge = false }: { children: React.ReactNode, isDark?: boolean, isLarge?: boolean }) => {
+const HexagonCard = ({ 
+  children, 
+  isDark = false, 
+  isLarge = false,
+  href 
+}: { 
+  children: React.ReactNode, 
+  isDark?: boolean, 
+  isLarge?: boolean,
+  href?: string 
+}) => {
   const sizeClasses = isLarge 
     ? "w-[240px] h-[208px] lg:w-[280px] lg:h-[242px] xl:w-[360px] xl:h-[312px]" 
     : "w-[80px] h-[69px] lg:w-[100px] lg:h-[86px] xl:w-[130px] xl:h-[112px]";
 
   const isImage = typeof children === 'string' && (children.includes('/') || children.includes('data:image'));
 
-  return (
-    <div className={`relative group ${sizeClasses} p-1 md:p-2 drop-shadow-md hover:drop-shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer z-10 hover:z-50`}>
-      <div 
-        className={`w-full h-full flex items-center justify-center p-1 md:p-2 text-center transition-colors duration-500 ${isDark ? 'bg-[#11052C]' : 'bg-[#f7f7f7]'}`}
-        style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-      >
-        {isDark ? (
-           <div className={`absolute inset-0 bg-gradient-to-br from-[#6B2D8C]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+  const content = (
+    <div 
+      className={`w-full h-full flex items-center justify-center p-1 md:p-2 text-center transition-colors duration-500 ${isDark ? 'bg-[#11052C]' : 'bg-[#f7f7f7]'}`}
+      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+    >
+      {isDark ? (
+         <div className={`absolute inset-0 bg-gradient-to-br from-[#6B2D8C]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+      ) : (
+         <div className="absolute inset-0 bg-[#f7f7f7] opacity-100 transition-opacity duration-500"></div>
+      )}
+      
+      {/* Clickable Hover Hint for specialized links */}
+      {href && (
+        <div className="absolute inset-0 flex items-center justify-center bg-[#6B2D8C]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+          <span className="bg-white/90 text-[#6B2D8C] text-[8px] px-2 py-1 rounded-full font-bold shadow-sm whitespace-nowrap">Visit Website</span>
+        </div>
+      )}
+
+      <span className={`relative z-10 w-full h-full flex flex-col items-center justify-center ${isLarge ? 'text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif italic tracking-widest' : 'text-[5px] lg:text-[7px] xl:text-[9px] font-sans font-bold uppercase'} ${isDark ? 'text-[#D4AF37]' : 'text-slate-500 group-hover:text-[#6B2D8C]'} transition-colors duration-300 leading-[1.2]`}>
+        {isImage ? (
+          <img src={children as string} alt="Partner Logo" className={`object-contain w-[85%] h-[85%] filter group-hover:scale-110 transition-transform duration-500 ${href ? 'brightness-110' : ''}`} />
         ) : (
-           <div className="absolute inset-0 bg-[#f7f7f7] opacity-100 transition-opacity duration-500"></div>
+          children
         )}
-        <span className={`relative z-10 w-full h-full flex flex-col items-center justify-center ${isLarge ? 'text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif italic tracking-widest' : 'text-[5px] lg:text-[7px] xl:text-[9px] font-sans font-bold uppercase'} ${isDark ? 'text-[#D4AF37]' : 'text-slate-500 group-hover:text-[#6B2D8C]'} transition-colors duration-300 leading-[1.2]`}>
-          {isImage ? (
-            <img src={children as string} alt="Partner Logo" className={`object-contain w-[85%] h-[85%] filter group-hover:scale-110 transition-transform duration-500`} />
-          ) : (
-            children
-          )}
-        </span>
-      </div>
+      </span>
+    </div>
+  );
+
+  const wrapperClass = `relative group ${sizeClasses} p-1 md:p-2 drop-shadow-md hover:drop-shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer z-10 hover:z-50 ${href ? 'hover:scale-105' : ''}`;
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={wrapperClass}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <div className={wrapperClass}>
+      {content}
     </div>
   );
 };
@@ -173,18 +206,24 @@ const Partners = () => {
                 </Reveal>
               </div>
 
+              {/* Supporting Partner - Exactly down below Business C-Nergy with horizontal drift for layout balance */}
+              <div className="absolute top-[125%] -translate-y-1/2 translate-x-12 lg:translate-x-6 flex flex-col items-center z-40">
+                <SectionLabel title="Supporting Partner" />
+                <div className="flex gap-[40px] lg:gap-[50px] xl:gap-[65px]">
+                  <HexagonCard href="https://sabahtourism.com/">{supportingsabah}</HexagonCard>
+                  <HexagonCard>{visitmalaysia}</HexagonCard>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          {/* RIGHT CLUSTER: Partners Cluster */}
           <div className="col-span-4 flex flex-col items-center relative z-10 w-full pt-16">
             <SectionLabel title="Jointly Presented By" />
             <Reveal delay={400} className="w-full mb-24">
               <div className="flex justify-center gap-[40px] lg:gap-[50px] xl:gap-[65px]">
-                 <HexagonCard>{<img src={visitmalaysia} alt="Visit Malaysia" className="w-full h-full object-contain p-2" />}</HexagonCard>
                  <HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard>
                  <HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard>
-                 
               </div>
             </Reveal>
 
@@ -208,24 +247,30 @@ const Partners = () => {
           <div className="flex flex-col sm:flex-row gap-12 sm:gap-8 justify-center w-full">
             <Reveal direction="up" delay={200} className="flex flex-col items-center">
               <SectionLabel title="A Project Of" />
-              <HexagonCard isDark>{ggsolution}</HexagonCard>
+              <HexagonCard isDark>{ggschool}</HexagonCard>
             </Reveal>
             <Reveal direction="up" delay={300} className="flex flex-col items-center">
               <SectionLabel title="Organised By" />
               <HexagonCard isDark>{ggsolution}</HexagonCard>
             </Reveal>
+            <Reveal direction="up" delay={400} className="flex flex-col items-center">
+              <SectionLabel title="Jointly Presented By" />
+              <div className="flex gap-4">
+                <HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard>
+                <HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard>
+              </div>
+            </Reveal>
           </div>
 
-          <Reveal direction="up" delay={400} className="flex flex-col items-center w-full">
-            <SectionLabel title="Jointly Presented By" />
+          <Reveal direction="up" delay={500} className="flex flex-col items-center w-full">
+            <SectionLabel title="Supporting Partner" />
             <div className="flex justify-center items-center gap-[40px] w-full">
-              <HexagonCard>{partnersLists.jointlyPresented[0]}</HexagonCard>
-              <HexagonCard>{partnersLists.jointlyPresented[1]}</HexagonCard>
-              <HexagonCard>{<img src={visitmalaysia} alt="Visit Malaysia" className="w-full h-full object-contain p-2" />}</HexagonCard>
+              <HexagonCard href="https://sabahtourism.com/">{sabah}</HexagonCard>
+              <HexagonCard>{visitmalaysia}</HexagonCard>
             </div>
           </Reveal>
 
-          <Reveal direction="up" delay={500} className="flex flex-col items-center w-full">
+          <Reveal direction="up" delay={550} className="flex flex-col items-center w-full">
             <SectionLabel title="Strategic Partners" />
             {renderHoneycomb(partnersLists.strategic, [3, 2])}
           </Reveal>
