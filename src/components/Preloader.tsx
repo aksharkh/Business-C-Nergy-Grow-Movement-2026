@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import GroupPhoto from '../assets/groupphoto.jpeg';
+import GoGlobal from '../assets/goglobal.png';
+import Logo from '../assets/companyLogos/logo.jpeg';
 
 const Preloader = () => {
   const [loading, setLoading] = useState(true);
@@ -10,11 +13,16 @@ const Preloader = () => {
     
     // Wait for all actual HTML images in the DOM to load
     const images = Array.from(document.images);
-    const imagePromises = images.map(img => {
-      if (img.complete) return Promise.resolve();
-      return new Promise((resolve) => {
-        img.onload = resolve;
-        img.onerror = resolve; // don't block the site if an image fails
+    
+    // Also preload specific heavy assets explicitly
+    const criticalAssets = [GroupPhoto, GoGlobal, Logo];
+    
+    const assetPromises = [...images.map(img => img.src), ...criticalAssets].map(src => {
+      return new Promise<void>((resolve) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => resolve();
+        img.onerror = () => resolve(); // don't block the site if an image fails
       });
     });
 
@@ -27,7 +35,7 @@ const Preloader = () => {
     }, 200);
 
     // Resolve when both images and min-time are done
-    Promise.all([...imagePromises, minTimePromise]).then(() => {
+    Promise.all([...assetPromises, minTimePromise]).then(() => {
       clearInterval(interval);
       setProgress(100);
       setTimeout(() => setLoading(false), 600); // Wait for the CSS fade-out animation to finish

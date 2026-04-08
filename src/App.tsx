@@ -11,8 +11,10 @@ import Mentors from './sections/Mentors';
 import Gallery from './sections/Gallery';
 // import FAQ from './sections/FAQ';
 import Register from './sections/Register';
+import VideoShowcase from './sections/VideoShowcase';
 import Partners from './sections/Partners';
 import Footer from './sections/Footer';
+import ScrollFeatures from './components/ScrollFeatures';
 // import ComingSoon from './sections/ComingSoon';
 
 import { Analytics } from "@vercel/analytics/react"
@@ -28,6 +30,7 @@ function App() {
       {/* <ComingSoon /> */}
 
       <div className="bg-[#f0f4f8] text-slate-900 font-sans selection:bg-[#6B2D8C] selection:text-white overflow-x-hidden relative">
+        <ScrollFeatures />
         <BackgroundGradients />
 
         <NavbarCustom scrollY={scrollY} />
@@ -42,6 +45,7 @@ function App() {
           <Gallery />
           {/* <FAQ /> */}
           <Register />
+          <VideoShowcase />
           <Partners />
         </main>
 

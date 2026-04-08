@@ -66,3 +66,29 @@ h1, h2, h3, h4, h5, h6 {
 .animate-pulse-soft {
   animation: pulse-soft 10s ease-in-out infinite;
 }
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 40s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-200%) skewX(-30deg);
+  }
+  100% {
+    transform: translateX(200%) skewX(-30deg);
+  }
+}
+
+.animate-shine {
+  animation: shine 4s ease-in-out infinite;
+}

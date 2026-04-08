@@ -66,11 +66,14 @@ const HexagonCard = ({
 
   const content = (
     <div 
-      className={`w-full h-full flex items-center justify-center p-1 md:p-2 text-center transition-colors duration-500 ${isDark ? 'bg-[#11052C]' : 'bg-[#f7f7f7]'}`}
+      className={`relative w-full h-full flex items-center justify-center p-1 md:p-2 text-center transition-all duration-500 overflow-hidden group-hover:shadow-[0_0_30px_rgba(107,45,140,0.6)] ${isDark ? 'bg-[#11052C]' : 'bg-[#f7f7f7]'}`}
       style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
     >
+      {/* Glossy Movement Shine Effect */}
+      <div className="absolute top-0 bottom-0 w-[200%] bg-white/20 z-30 pointer-events-none animate-shine hidden group-hover:block" style={{ mixBlendMode: 'overlay' }}></div>
+      
       {isDark ? (
-         <div className={`absolute inset-0 bg-gradient-to-br from-[#6B2D8C]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+         <div className={`absolute inset-0 bg-gradient-to-br from-[#6B2D8C]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0`}></div>
       ) : (
          <div className="absolute inset-0 bg-[#f7f7f7] opacity-100 transition-opacity duration-500"></div>
       )}
@@ -92,7 +95,7 @@ const HexagonCard = ({
     </div>
   );
 
-  const wrapperClass = `relative group ${sizeClasses} p-1 md:p-2 drop-shadow-md hover:drop-shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer z-10 hover:z-50 ${href ? 'hover:scale-105' : ''}`;
+  const wrapperClass = `relative group ${sizeClasses} p-1 md:p-2 drop-shadow-md hover:drop-shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer z-10 hover:z-50 ${href ? 'hover:scale-105' : ''} ${isLarge ? 'hover:scale-105 hover:-rotate-2' : ''}`;
 
   if (href) {
     return (
@@ -143,7 +146,7 @@ const renderHoneycomb = (items: string[], pattern: number[]) => {
   return (
     <div className="flex flex-col items-center w-full">
       {rows.map((row, idx) => (
-        <Reveal key={`row-${idx}`} delay={100 + (idx % 4) * 100} className="w-full flex justify-center">
+        <Reveal key={`row-${idx}`} delay={100 + (idx % 4) * 100} direction={idx % 2 === 0 ? "left" : "right"} className="w-full flex justify-center">
           <div className={`flex justify-center items-center gap-[40px] lg:gap-[50px] xl:gap-[65px] ${idx > 0 ? '-mt-[34.5px] lg:-mt-[43px] xl:-mt-[56px]' : ''} ${row.forceShift ? 'translate-x-[60px] lg:translate-x-[75px] xl:translate-x-[97.5px]' : ''}`}>
             {row.items.map((p, itemIdx) => <HexagonCard key={`logo-${idx}-${itemIdx}`}>{p}</HexagonCard>)}
           </div>
@@ -160,7 +163,7 @@ const Partners = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80vw] h-[80vw] bg-[#6B2D8C]/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
       <div className="max-w-[1600px] mx-auto px-1 md:px-4 relative z-10 text-center">
-        <Reveal>
+        <Reveal direction="down">
           <p className="text-[#6B2D8C] font-bold tracking-[0.2em] uppercase mb-4">OUR NETWORK</p>
           <h2 className="text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-serif text-[#11052C] lg:mb-12">
             Organisers & Partners with <br className="hidden md:block"/>
@@ -188,12 +191,12 @@ const Partners = () => {
               {/* Top Nodes spaced out horizontally and shifted LEFT as requested */}
               <div className="absolute top-0 translate-x-1/3 -ml-[170px] lg:-ml-[230px] xl:-ml-[300px] flex flex-col items-center">
                 <SectionLabel title="A Project Of" />
-                <Reveal delay={100}><HexagonCard >{ggschool}</HexagonCard></Reveal>
+                <Reveal delay={100} direction="left"><HexagonCard >{ggschool}</HexagonCard></Reveal>
               </div>
 
               <div className="absolute top-0 left-1/5 translate-x-1/4 ml-[90px] lg:ml-[110px] xl:ml-[140px] flex flex-col items-center">
                 <SectionLabel title="Organised By" />
-                <Reveal delay={200}><HexagonCard >{ggsolution}</HexagonCard></Reveal>
+                <Reveal delay={200} direction="right"><HexagonCard >{ggsolution}</HexagonCard></Reveal>
               </div>
 
               {/* MAIN CENTRAL NODE pushed completely down and shifted LEFT as requested */}
@@ -247,11 +250,11 @@ const Partners = () => {
           <div className="flex flex-col sm:flex-row gap-12 sm:gap-8 justify-center w-full">
             <Reveal direction="up" delay={200} className="flex flex-col items-center">
               <SectionLabel title="A Project Of" />
-              <HexagonCard isDark>{ggschool}</HexagonCard>
+              <HexagonCard>{ggschool}</HexagonCard>
             </Reveal>
             <Reveal direction="up" delay={300} className="flex flex-col items-center">
               <SectionLabel title="Organised By" />
-              <HexagonCard isDark>{ggsolution}</HexagonCard>
+              <HexagonCard>{ggsolution}</HexagonCard>
             </Reveal>
             <Reveal direction="up" delay={400} className="flex flex-col items-center">
               <SectionLabel title="Jointly Presented By" />

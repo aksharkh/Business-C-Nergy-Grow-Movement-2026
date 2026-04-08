@@ -7,28 +7,28 @@ const MentorCard = ({ mentor }: { mentor: any }) => (
     href={mentor.linkedin} 
     target="_blank" 
     rel="noopener noreferrer"
-    className="group flex flex-col relative w-[220px] md:w-[280px] shrink-0"
+    className="group flex flex-col relative w-[130px] md:w-[280px] shrink-0 transition-all duration-500 md:hover:-translate-y-2 md:hover:rotate-1 md:hover:scale-[1.02] z-10 hover:z-30"
   >
-    <div className="absolute left-[30px] md:left-[40px] top-[140px] md:top-[180px] w-[2px] h-[100px] md:h-[130px] bg-[#6B2D8C]/20 group-hover:bg-[#6B2D8C] transition-colors duration-500 z-0 pointer-events-none"></div>
+    <div className="absolute left-[30px] md:left-[40px] top-[90px] md:top-[180px] w-[2px] h-[60px] md:h-[130px] bg-[#D4AF37]/60 group-hover:bg-[#D4AF37] group-hover:shadow-[0_0_15px_#D4AF37] transition-all duration-500 z-0 pointer-events-none"></div>
 
-    <div className="w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full overflow-hidden border-[6px] border-white shadow-xl bg-slate-200 relative z-10 transition-transform duration-500 group-hover:-translate-y-3">
+    <div className="w-[100px] h-[100px] md:w-[240px] md:h-[240px] rounded-full overflow-hidden border-[3px] md:border-[6px] border-white group-hover:border-[#f9f5ff] shadow-xl group-hover:shadow-[0_20px_40px_-5px_rgba(107,45,140,0.3)] bg-slate-200 relative z-10 transition-all duration-500">
       <img 
         src={mentor.photo} 
         alt={mentor.name} 
-        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none" 
+        className="w-full h-full object-cover md:group-hover:scale-110 transition-transform duration-700 pointer-events-none" 
       />
-      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B2D8C]/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-[#6B2D8C]/40 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
     </div>
 
-    <div className="absolute top-[10px] right-[25px] w-8 h-8 md:w-10 md:h-10 rounded-full bg-white shadow-lg opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 group-hover:translate-x-2 transition-all duration-500 z-20 flex items-center justify-center text-xl md:text-2xl overflow-hidden border border-slate-100 pointer-events-none">
+    <div className="absolute top-[0px] md:top-[10px] right-[30px] md:right-[25px] w-6 h-6 md:w-10 md:h-10 rounded-full bg-white shadow-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-2 md:group-hover:translate-x-2 md:group-hover:rotate-12 transition-all duration-500 z-20 flex items-center justify-center text-sm md:text-2xl overflow-hidden border border-slate-100 pointer-events-none">
       {mentor.flag}
     </div>
 
-    <div className="mt-8 ml-[30px] md:ml-[40px] pl-6 relative z-10 pointer-events-none">                  
-      <h3 className="text-lg md:text-xl font-bold font-sans text-[#2D1B3D] group-hover:text-[#6B2D8C] tracking-widest uppercase mb-2 transition-colors duration-300">
+    <div className="mt-4 md:mt-8 ml-[25px] md:ml-[40px] pl-3 md:pl-6 relative z-10 pointer-events-none">                  
+      <h3 className="text-[11px] md:text-xl font-bold font-sans text-[#2D1B3D] group-hover:text-[#6B2D8C] tracking-widest uppercase mb-1 md:mb-2 transition-colors duration-300">
         {mentor.name}
       </h3>
-      <p className="text-[10px] md:text-xs font-semibold tracking-[0.2em] text-slate-500 group-hover:text-[#D4AF37] uppercase transition-colors duration-300 whitespace-pre-line">
+      <p className="text-[8px] md:text-xs font-bold tracking-[0.1em] md:tracking-[0.2em] text-[#D4AF37] uppercase transition-colors duration-300 whitespace-pre-line leading-tight">
         {mentor.role}
       </p>
     </div>
@@ -40,11 +40,11 @@ const secondRow = mentorsData.slice(11);
 
 // One unified block containing exactly both rows so they scroll flawlessly together
 const MentorsBlock = forwardRef<HTMLDivElement, {}>((_, ref) => (
-  <div ref={ref} className="flex flex-col gap-12 w-max shrink-0">
-    <div className="flex gap-12">
+  <div ref={ref} className="flex flex-col gap-6 md:gap-12 w-max shrink-0">
+    <div className="flex gap-4 md:gap-12">
       {firstRow.map((m, i) => <MentorCard key={`r1-${i}`} mentor={m} />)}
     </div>
-    <div className="flex gap-12">
+    <div className="flex gap-4 md:gap-12 ml-[30px] md:ml-[140px]">
       {secondRow.map((m, i) => <MentorCard key={`r2-${i}`} mentor={m} />)}
     </div>
   </div>
@@ -105,7 +105,7 @@ const Mentors = () => {
 
       <div 
         ref={scrollRef}
-        className="w-full flex gap-12 overflow-x-auto hide-scrollbar pb-8 pl-6 md:pl-12 pr-12 relative z-20 select-none"
+        className="w-full flex gap-12 overflow-x-auto hide-scrollbar pt-12 pb-8 pl-6 md:pl-12 pr-12 relative z-20 select-none"
         style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
         onMouseDown={startDragging}
         onMouseLeave={stopDragging}

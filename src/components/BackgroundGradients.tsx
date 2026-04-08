@@ -2,15 +2,15 @@ const BackgroundGradients = () => {
   return (
     <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-white">
       {/* Rich Purple Blob - Top Right */}
-      <div className="absolute top-[-10%] right-[-10%] w-[90vw] h-[90vw] bg-[#6B2D8C]/25 rounded-full blur-[100px] mix-blend-multiply animate-pulse-soft"></div>
+      <div className="absolute top-[-20%] right-[-20%] w-[120vw] h-[120vw] md:w-[90vw] md:h-[90vw] mix-blend-multiply animate-pulse-soft" style={{ background: 'radial-gradient(closest-side, rgba(107, 45, 140, 0.25), transparent)' }}></div>
       {/* Light Purple Blob - Bottom Left */}
-      <div className="absolute bottom-[-10%] left-[-10%] w-[80vw] h-[80vw] bg-[#A878B8]/20 rounded-full blur-[80px] mix-blend-multiply animate-float"></div>
+      <div className="absolute bottom-[-20%] left-[-20%] w-[120vw] h-[120vw] md:w-[80vw] md:h-[80vw] mix-blend-multiply animate-float" style={{ background: 'radial-gradient(closest-side, rgba(168, 120, 184, 0.2), transparent)' }}></div>
       {/* Soft Purple Blob - Center Left */}
-      <div className="absolute top-[40%] left-[20%] w-[50vw] h-[50vw] bg-[#8B4BA8]/22 rounded-full blur-[80px] mix-blend-multiply animate-float-reverse"></div>
+      <div className="absolute top-[30%] left-[10%] w-[90vw] h-[90vw] md:w-[50vw] md:h-[50vw] mix-blend-multiply animate-float-reverse" style={{ background: 'radial-gradient(closest-side, rgba(139, 75, 168, 0.22), transparent)' }}></div>
       {/* Additional Purple Blob - Top Center */}
-      <div className="absolute top-[10%] left-[50%] w-[60vw] h-[60vw] bg-[#6B2D8C]/18 rounded-full blur-[90px] mix-blend-multiply animate-float"></div>
+      <div className="absolute top-[0%] left-[30%] w-[100vw] h-[100vw] md:w-[60vw] md:h-[60vw] mix-blend-multiply animate-float" style={{ background: 'radial-gradient(closest-side, rgba(107, 45, 140, 0.18), transparent)' }}></div>
       {/* Additional Light Purple Blob - Right Center */}
-      <div className="absolute top-[50%] right-[10%] w-[50vw] h-[50vw] bg-[#9B6CB0]/15 rounded-full blur-[85px] mix-blend-multiply animate-pulse-soft"></div>
+      <div className="absolute top-[40%] right-[0%] w-[90vw] h-[90vw] md:w-[50vw] md:h-[50vw] mix-blend-multiply animate-pulse-soft" style={{ background: 'radial-gradient(closest-side, rgba(155, 108, 176, 0.15), transparent)' }}></div>
       {/* Texture */}
       <div
         className="absolute inset-0 opacity-[0.2] mix-blend-overlay"

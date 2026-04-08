@@ -4,13 +4,25 @@ import GroupPhoto from '../assets/goglobal.png'
 const About = () => {
   return (
     <section id="about" className="py-32 relative bg-white">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 relative z-10">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-20 relative z-10">
         
-        {/* Left Column */}
-        <div className="flex flex-col justify-start h-full">
-          <Reveal className="mb-12">
-            <p className="text-[#6B2D8C] font-bold tracking-[0.2em] uppercase mb-4 text-center lg:text-left">ABOUT US</p>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-10 leading-[1.15] text-center lg:text-left">
+        {/* Mobile Title (Hidden on Desktop) */}
+        <Reveal className="block lg:hidden mb-2 text-center">
+          <p className="text-[#6B2D8C] font-bold tracking-[0.2em] uppercase mb-2">ABOUT US</p>
+          <h2 className="text-4xl md:text-5xl font-serif leading-[1.15]">
+            <span className="text-[#11052C] font-bold">Conscious Business.</span><br/>
+            <span className="text-[#6B2D8C] font-bold">Global Impact.</span><br/>
+            <span className="text-[#D4AF37] italic">Collective Growth.</span>
+          </h2>
+        </Reveal>
+
+        {/* Left Column (Will be order-2 on mobile so it comes AFTER mission/photo) */}
+        <div className="order-2 lg:order-1 flex flex-col justify-start h-full pb-16 lg:pb-0">
+          
+          {/* Desktop Title */}
+          <Reveal className="hidden lg:block mb-12">
+            <p className="text-[#6B2D8C] font-bold tracking-[0.2em] uppercase mb-4 text-left">ABOUT US</p>
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif mb-10 leading-[1.15] text-left">
               <span className="text-[#11052C] font-bold">Conscious Business.</span><br/>
               <span className="text-[#6B2D8C] font-bold">Global Impact.</span><br/>
               <span className="text-[#D4AF37] italic">Collective Growth.</span>
@@ -60,8 +72,8 @@ const About = () => {
           </Reveal>
         </div>
 
-        {/* Right Column */}
-        <div className="relative flex flex-col h-full">
+        {/* Right Column (Will be order-1 on mobile so it comes right after mobile title) */}
+        <div className="order-1 lg:order-2 relative flex flex-col h-full mt-4 lg:mt-0">
           <Reveal delay={100} className="mb-12">
             <div className="space-y-6 text-base text-slate-700 leading-relaxed font-light mt-8 lg:mt-0">
               <div className="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200 hover:shadow-lg transition-all duration-300">
@@ -92,11 +104,11 @@ const About = () => {
                 alt="Leadership & Collaboration"
                 className="w-full h-full object-cover scale-100 group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
               />
-              <div className="absolute bottom-6 left-6 right-6 p-8 bg-white/95 backdrop-blur-xl max-w-md z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 shadow-lg rounded-xl border border-white/60">
-                <p className="font-serif italic text-2xl text-[#6B2D8C] leading-tight mb-2">
+              <div className="absolute bottom-6 left-6 right-6 p-6 md:p-8 bg-white/95 backdrop-blur-xl max-w-md z-20 translate-y-0 lg:translate-y-4 opacity-100 lg:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 shadow-lg rounded-xl border border-white/60">
+                <p className="font-serif italic text-xl md:text-2xl text-[#6B2D8C] leading-tight mb-2">
                   "From Malaysia to Asia, and Asia to the World."
                 </p>
-                <p className="text-sm text-slate-600">
+                <p className="text-xs md:text-sm text-slate-600">
                   Building a global network of conscious leaders committed to sustainable, purpose-driven business.
                 </p>
               </div>

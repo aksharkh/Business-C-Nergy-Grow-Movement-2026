@@ -15,15 +15,20 @@ const NavbarCustom = ({ scrollY = 0 }: NavbarProps) => {
       {/* --- Floating Island Navigation --- */}
       <nav
         className={`
-          fixed z-50 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]
-          ${
-            scrollY > 50
-              ? 'top-6 left-1/2 -translate-x-1/2 w-[90%] md:w-[85%] max-w-[1000px] rounded-full bg-white/60 backdrop-blur-2xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.06)] py-3 px-6'
-              : 'top-0 left-0 w-full bg-transparent border-b border-transparent py-4 px-6 md:px-12'
-          }
+          fixed top-0 left-0 w-full flex justify-center z-50 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] pointer-events-none
+          ${scrollY > 50 ? 'pt-4 md:pt-6' : 'pt-0'}
         `}
       >
-        <div className={`flex justify-between items-center w-full ${scrollY < 50 ? 'max-w-[1400px] mx-auto' : ''}`}>
+        <div
+          className={`
+            pointer-events-auto transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] flex justify-between items-center
+            ${
+              scrollY > 50
+                ? 'w-[90%] md:w-[85%] max-w-[1000px] rounded-full bg-white/80 backdrop-blur-2xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.06)] py-2 md:py-3 px-4 md:px-6'
+                : 'w-full max-w-[1400px] rounded-none bg-transparent border-transparent py-3 md:py-4 px-6 md:px-12'
+            }
+          `}
+        >
           <a href="#" className="flex items-center gap-3 group">
             {/* Logo */}
             

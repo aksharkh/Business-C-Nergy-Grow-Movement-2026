@@ -185,24 +185,26 @@ const Register = () => {
           <div className="w-20 h-20 mx-auto bg-[#6B2D8C] rounded-2xl flex items-center justify-center text-white mb-8 shadow-xl shadow-purple-500/30 animate-float transform rotate-3 hover:rotate-6 transition-transform">
             <Calendar size={32} />
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-white mb-6">Ready for Quantum Leap in Your Business?</h2>
-          <p className="text-slate-300 mb-4 text-xl md:text-2xl max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6">Ready for Quantum Leap in Your Business?</h2>
+          <p className="text-slate-300 mb-4 text-lg md:text-2xl max-w-4xl mx-auto">
             <span className="text-[#D4AF37] font-bold">Be a Part of the Movement and Accelerate Your Growth!</span>
           </p>
-          <p className="text-white font-bold tracking-widest uppercase text-lg max-w-4xl mx-auto mt-6 bg-white/10 py-3 rounded-full border border-white/20">
-            FREE Signup for Value worth Thousands of Dollars
-          </p>
+          <div className="overflow-hidden max-w-full">
+            <p className="text-white font-bold tracking-widest uppercase text-[8px] sm:text-xs lg:text-lg w-fit mx-auto mt-6 bg-white/10 px-4 md:px-8 py-2 md:py-3 rounded-full border border-white/20 whitespace-nowrap overflow-hidden text-ellipsis">
+              FREE Signup for Value worth Thousands of Dollars
+            </p>
+          </div>
         </Reveal>
 
         {/* Benefits Section */}
         <Reveal delay={100} direction="up" className="mb-16">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-4xl font-serif text-white mb-8">What You'll Gain</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-12">
+            <h3 className="text-xl md:text-4xl font-serif text-white mb-6 md:mb-8 text-center md:text-left">What You'll Gain</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="flex items-start gap-4 group hover:bg-white/5 p-4 rounded-xl transition-all duration-300">
-                  <CheckCircle className="w-6 h-6 text-[#D4AF37] shrink-0 mt-1 group-hover:scale-110 transition-transform" />
-                  <p className="text-white group-hover:text-[#D4AF37] transition-colors duration-300">{benefit}</p>
+                <div key={idx} className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 group hover:bg-white/5 p-3 md:p-4 rounded-xl transition-all duration-300 text-center md:text-left">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-[#D4AF37] shrink-0 md:mt-1 group-hover:scale-110 transition-transform" />
+                  <p className="text-white group-hover:text-[#D4AF37] transition-colors duration-300 text-[10px] md:text-base leading-tight md:leading-normal">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -281,7 +283,7 @@ const Register = () => {
                     required
                     disabled={isLoading}
                     className="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-white text-base focus:ring-2 focus:ring-[#6B2D8C] focus:bg-white/10 focus:border-white/30 outline-none transition-all placeholder-white/30 group-hover:border-white/20 disabled:opacity-50 disabled:cursor-not-allowed"
-                    placeholder="60 123456789"
+                    placeholder="+60 123456789"
                   />
                 </div>
                 <div className="group">

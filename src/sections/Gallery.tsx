@@ -11,7 +11,7 @@ const Gallery = () => {
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 relative z-10 mb-16 md:mb-24 text-center">
         <Reveal>
           <span className="text-[#D4AF37] font-bold tracking-[0.2em] uppercase text-xs md:text-sm mb-4 block">Capturing the Movement</span>
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif text-white">Event Highlights</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif text-[#11052C]">Event Highlights</h2>
         </Reveal>
       </div>
 

@@ -53,9 +53,9 @@ const Impact = () => {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {stats.map((stat, idx) => (
-            <Reveal key={idx} delay={idx * 100} className={stat.span ? `lg:col-span-2 h-full` : 'h-full'}>
+            <Reveal key={idx} delay={idx * 100} direction="up" className={stat.span ? `lg:col-span-2 h-full` : 'h-full'}>
               <StatCard
                 icon={stat.icon}
                 number={stat.number}
