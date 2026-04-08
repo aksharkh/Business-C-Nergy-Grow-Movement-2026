@@ -14,6 +14,7 @@ const Register = () => {
     yearsInBusiness: '',
     interest: 'Business Leaders who want to participate & stay updated with movement',
     referral: '',
+    readiness: [] as string[],
     consent: false,
   });
 
@@ -26,6 +27,37 @@ const Register = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value, type } = e.target as any;
+    
+    if (name === 'readiness' && type === 'checkbox') {
+      const isChecked = (e.target as HTMLInputElement).checked;
+      setFormData(prev => {
+        const currentReadiness = prev.readiness as string[];
+        
+        // --- SMART LOGIC FOR ALL OF THE ABOVE ---
+        if (value === 'All of the above') {
+          if (isChecked) {
+            // Check all options
+            return { ...prev, readiness: readinessOptions };
+          } else {
+            // Clear all options
+            return { ...prev, readiness: [] };
+          }
+        }
+        
+        // If ALL of the above is currently active, prevent individual unchecking of other items
+        if (currentReadiness.includes('All of the above') && !isChecked) {
+          return prev;
+        }
+
+        if (isChecked) {
+          return { ...prev, readiness: [...currentReadiness, value] };
+        } else {
+          return { ...prev, readiness: currentReadiness.filter(item => item !== value) };
+        }
+      });
+      return;
+    }
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
@@ -53,13 +85,25 @@ const Register = () => {
         throw new Error('Google Apps Script URL not configured. Please set VITE_GOOGLE_APPS_SCRIPT_URL in .env.local');
       }
 
-      const response = await fetch(scriptUrl, {
+      const sheetName = 'Business C-Nergy 2026 Registrations';
+      const encodedSheet = encodeURIComponent(sheetName);
+      const targetUrl = `${scriptUrl}?sheetName=${encodedSheet}&sheet=${encodedSheet}`;
+
+      const payload = {
+        ...formData,
+        whatsapp: `"${formData.whatsapp}"`,
+        readiness: Array.isArray(formData.readiness) ? formData.readiness.join(', ') : formData.readiness,
+        sheetName,
+        sheet: sheetName
+      };
+
+      const response = await fetch(targetUrl, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'text/plain',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       // With no-cors mode, assume success if no error
@@ -78,6 +122,7 @@ const Register = () => {
         yearsInBusiness: '',
         interest: 'Business Leaders who want to participate & stay updated with movement',
         referral: '',
+        readiness: [],
         consent: false,
       });
       
@@ -96,12 +141,10 @@ const Register = () => {
   };
 
   const benefits = [
-    'Direct access to global mentors & advisors',
-    'Quarterly business growth sessions',
-    'Strategic partnership opportunities',
-    'Business certification & recognition',
-    'Media visibility & thought leadership',
-    'Investment-ready acceleration program'
+    'Business opportunities in new markets and new income streams.',
+    'Access to global mentors and complimentary consultations.',
+    'Over 50 hours of free learnings with Q&A sessions.',
+    'Invites to online and in-person networking sessions.'
   ];
 
   const interestOptions = [
@@ -110,6 +153,14 @@ const Register = () => {
     'Service Provider to SMEs - Corporates : F&B, Digital Marketing, Corporate Gifts, etc.',
     'International Professional Trainers and Consultants',
     'Other'
+  ];
+
+  const readinessOptions = [
+    'Learning and get access to all the FREE online sessions',
+    'Attending Online & In-Person Business C-nergy & Growth Conference with Business Matching & Deal making potential',
+    'Participating in Expo and showcase my business and get partners in new markets',
+    'Consulting to expand new markets / Raise Fund for my business',
+    'All of the above'
   ];
 
   return (
@@ -134,24 +185,26 @@ const Register = () => {
           <div className="w-20 h-20 mx-auto bg-[#6B2D8C] rounded-2xl flex items-center justify-center text-white mb-8 shadow-xl shadow-purple-500/30 animate-float transform rotate-3 hover:rotate-6 transition-transform">
             <Calendar size={32} />
           </div>
-          <h2 className="text-5xl md:text-7xl font-serif text-white mb-6">Ready for 2026?</h2>
-          <p className="text-slate-300 mb-4 text-xl max-w-2xl mx-auto">
-            <span className="text-[#D4AF37] font-bold">Business C-Nergy & Grow Movement 2026</span>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6">Ready for Quantum Leap in Your Business?</h2>
+          <p className="text-slate-300 mb-4 text-lg md:text-2xl max-w-4xl mx-auto">
+            <span className="text-[#D4AF37] font-bold">Be a Part of the Movement and Accelerate Your Growth!</span>
           </p>
-          <p className="text-slate-400 text-lg max-w-4xl mx-auto">
-            🟣 <strong>30+ Inspirational Global Mentors</strong> | 🟣 <strong>20 LIVE Learning Power Break Sessions</strong> | 🟣 <strong>5000+ Business Leaders Impacted</strong> | 🟣 <strong>400+ Business Projects Matched</strong> | 🟣 <strong>80+ Organizations Scaled</strong> | 🟣 <strong>100+ Children Funded for Education</strong>
-          </p>
+          <div className="overflow-hidden max-w-full">
+            <p className="text-white font-bold tracking-widest uppercase text-[8px] sm:text-xs lg:text-lg w-fit mx-auto mt-6 bg-white/10 px-4 md:px-8 py-2 md:py-3 rounded-full border border-white/20 whitespace-nowrap overflow-hidden text-ellipsis">
+              FREE Signup for Value worth Thousands of Dollars
+            </p>
+          </div>
         </Reveal>
 
         {/* Benefits Section */}
         <Reveal delay={100} direction="up" className="mb-16">
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-4xl font-serif text-white mb-8">What You'll Gain</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-6 md:p-12">
+            <h3 className="text-xl md:text-4xl font-serif text-white mb-6 md:mb-8 text-center md:text-left">What You'll Gain</h3>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="flex items-start gap-4 group hover:bg-white/5 p-4 rounded-xl transition-all duration-300">
-                  <CheckCircle className="w-6 h-6 text-[#D4AF37] shrink-0 mt-1 group-hover:scale-110 transition-transform" />
-                  <p className="text-white group-hover:text-[#D4AF37] transition-colors duration-300">{benefit}</p>
+                <div key={idx} className="flex flex-col md:flex-row items-center md:items-start gap-2 md:gap-4 group hover:bg-white/5 p-3 md:p-4 rounded-xl transition-all duration-300 text-center md:text-left">
+                  <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-[#D4AF37] shrink-0 md:mt-1 group-hover:scale-110 transition-transform" />
+                  <p className="text-white group-hover:text-[#D4AF37] transition-colors duration-300 text-[10px] md:text-base leading-tight md:leading-normal">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -159,7 +212,7 @@ const Register = () => {
         </Reveal>
 
         {/* Impact Metrics */}
-        <Reveal delay={200} direction="up" className="mb-16">
+        {/* <Reveal delay={200} direction="up" className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-[#6B2D8C]/30 border border-[#D4AF37]/30 rounded-2xl p-8 text-center hover:bg-[#6B2D8C]/50 transition-all duration-300">
               <div className="text-5xl font-serif text-[#D4AF37] mb-2">5000+</div>
@@ -174,7 +227,7 @@ const Register = () => {
               <p className="text-white text-sm uppercase tracking-widest">Global Organizations</p>
             </div>
           </div>
-        </Reveal>
+        </Reveal> */}
 
         {/* Registration Form */}
         <Reveal delay={300} direction="up">
@@ -257,7 +310,7 @@ const Register = () => {
                     Number of years in Business
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     name="yearsInBusiness"
                     value={formData.yearsInBusiness}
                     onChange={handleChange}
@@ -267,9 +320,9 @@ const Register = () => {
                   />
                 </div>
                 <div className="group">
-                  <label htmlFor="interest" className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
-                    Interest to Participate as *
-                  </label>
+                <label htmlFor="interest" className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
+                  Interest to Participate as *
+                </label>
                   <select
                     id="interest"
                     name="interest"
@@ -304,6 +357,48 @@ const Register = () => {
                   placeholder="Who referred you?"
                 />
               </div>
+
+              {/* Readiness Options */}
+              <div className="mb-6 group">
+                <label className="block text-[11px] uppercase tracking-widest text-[#D4AF37] mb-3 font-bold">
+                  I am ready for: *
+                </label>
+                <div className="space-y-3">
+                  {readinessOptions.map((option, idx) => {
+                    const isAllSelected = (formData.readiness as string[]).includes('All of the above');
+                    const isCheckable = !isAllSelected || option === 'All of the above';
+                    
+                    return (
+                      <label 
+                        key={idx} 
+                        className={`flex items-start gap-3 p-3 rounded-lg border transition-all cursor-pointer ${
+                          !isCheckable ? 'bg-white/10 opacity-60 cursor-not-allowed border-white/30' : 'bg-white/5 border-white/10 hover:border-white/30'
+                        }`}
+                      >
+                        <input
+                          type="checkbox"
+                          name="readiness"
+                          value={option}
+                          checked={(formData.readiness as string[]).includes(option)}
+                          onChange={handleChange}
+                          disabled={isLoading || (!isCheckable && option !== 'All of the above')}
+                          className={`w-5 h-5 rounded border-white/30 text-[#6B2D8C] focus:ring-2 focus:ring-[#6B2D8C] mt-0.5 cursor-pointer accent-[#6B2D8C] disabled:opacity-50 shrink-0 ${
+                            !isCheckable ? 'opacity-40' : ''
+                          }`}
+                        />
+                        <div className="flex flex-col">
+                          <span className="text-white text-sm">{option}</span>
+                          {!isCheckable && option !== 'All of the above' && (
+                            <span className="text-[10px] text-[#D4AF37] opacity-60">Already selected via 'All of the above'</span>
+                          )}
+                        </div>
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
+
+
 
               {/* Consent Checkbox */}
               <div className="mb-8 flex items-start gap-3 p-4 bg-white/5 rounded-lg border border-white/10">

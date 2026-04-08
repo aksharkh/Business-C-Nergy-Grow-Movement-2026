@@ -1,8 +1,43 @@
-import DoriaCordova from '../assets/Doria-Cordova-Yellow-Sitting-BEST.jpg';
-import YPLai from '../assets/Mr. YP Lai.jpg';
-import KCSee from '../assets/Mr. KC See.png';
-import GunterConrad from '../assets/Mr Guntur conard.webp';
-import Gina from '../assets/Gina.jpeg';
+import Azeez from '../assets/mentors/azeez.png';
+import Carol from '../assets/mentors/carol.png';
+import YpLai from '../assets/mentors/Mr. YP Lai.jpg';
+import Brandon from '../assets/mentors/brandon.png';
+import Imran from '../assets/mentors/imran.png';
+import Rahat from '../assets/mentors/rahat.png';
+import Doria from '../assets/mentors/Doria-Cordova-Yellow-Sitting-BEST.jpg';
+import Gunter from '../assets/mentors/gunter.jpeg';
+import KcSee from '../assets/mentors/see.png';
+import Qin from '../assets/mentors/qin.png';
+import Yen from '../assets/mentors/yen.png';
+import Soni from '../assets/mentors/soni.png';
+import Vance from '../assets/mentors/vance.png';
+import Isaac from '../assets/mentors/isaac.png';
+import Jani from '../assets/mentors/jani.png';
+import Deepak from '../assets/mentors/deepak.webp';
+import Hamano from '../assets/mentors/hamano.png';
+import Steve from '../assets/mentors/steve.webp';
+import Sivem from '../assets/mentors/sivem.png';
+import Gregg from '../assets/mentors/gregg.png';
+import Jeiyan from '../assets/mentors/jeiyan.png';
+
+// Historical Event Gallery Imports
+import Event1 from '../assets/events/2012 DC.jpeg';
+import Event2 from '../assets/events/2015 Project Valarchi.jpeg';
+import Event3 from '../assets/events/2022 award.jpeg';
+import Event4 from '../assets/events/CEO M&Y 2015.jpeg';
+import Event5 from '../assets/events/Event - 2025.jpeg';
+import Event6 from '../assets/events/Event 2014.jpeg';
+import Event7 from '../assets/events/Group - IIF Prelude.jpeg';
+import Event8 from '../assets/events/IIF 2025.jpeg';
+import Event9 from '../assets/events/M&Y 1.jpeg';
+import Event10 from '../assets/events/M&Y 2015.jpg';
+import Event11 from '../assets/events/M&Y KL.jpeg';
+import Event12 from '../assets/events/SG 2.jpeg';
+import Event13 from '../assets/events/Sabah -1.jpeg';
+import Event14 from '../assets/events/Sabah 2012.jpeg';
+import Event15 from '../assets/events/Utah Forum.jpeg';
+import Event16 from '../assets/events/Utah.jpeg';
+import Event17 from '../assets/events/past pics.jpeg';
 
 // Color Scheme - Purple, White & Gold
 export const colors = {
@@ -23,43 +58,49 @@ export const animations = {
   transitionDuration: 500,
 };
 
-// Mentors Data
+// Mentors Data - Strictly Mapped in Explicit Order
 export const mentorsData = [
-  { 
-    name: 'Dame Doria Cordova', 
-    role: 'Excellerated Business School, USA', 
-    bio: 'Founder and CEO of Excellerated Business School. Pioneer in conscious business education with 30+ years of experience transforming entrepreneurs into leaders.',
-    linkedin: 'https://www.linkedin.com/in/dccordova/', 
-    photo: DoriaCordova 
-  },
-  { 
-    name: 'Mr YP Lai', 
-    role: 'Work Less Earn More Academy, Malaysia - Australia', 
-    bio: 'Business strategist helping entrepreneurs create scalable, sustainable businesses that generate wealth while maintaining work-life balance.',
-    linkedin: 'https://www.linkedin.com/in/yplai/', 
-    photo: YPLai 
-  },
-  { 
-    name: 'Mr KC See', 
-    role: 'Quest AI, Malaysia', 
-    bio: 'Technology innovator and AI expert. Empowering businesses in Southeast Asia to leverage AI for growth and competitive advantage.',
-    linkedin: 'https://www.linkedin.com/in/kcsee/', 
-    photo: KCSee 
-  },
-  { 
-    name: 'Mr Gunter Conrad', 
-    role: 'Business Advisor, Germany', 
-    bio: 'Global business strategist with expertise in European-Asian market bridges. Facilitates cross-border investments and strategic partnerships.',
-    linkedin: 'https://www.linkedin.com/in/g%C3%BCnter-conrad-82655067/', 
-    photo: GunterConrad 
-  },
-  { 
-    name: 'Ms Gina', 
-    role: 'Impact Leader, Malaysia', 
-    bio: 'Advocate for conscious business and sustainable development. Connects passionate entrepreneurs with impact-driven investment opportunities.',
-    linkedin: 'https://www.linkedin.com/in/gina-phan/', 
-    photo: Gina
-  },
+  { name: 'Dr.h.c. AZEEZA JALALUDEEN', role: 'Founder - Director\nMovement Lead', photo: Azeez, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/azeezajalaludeen/' },
+  { name: 'CAROL KHOO', role: 'Finance Lead', photo: Carol, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/carol-khoo-005008103/?skipRedirect=true' },
+  { name: 'YP LAI', role: 'BNI Global Trainer\nFounder, WLEM Academy\nCo-Organiser BCG Movement', photo: YpLai, flag: '🇦🇺', linkedin: 'https://www.linkedin.com/in/yplai/' },
+  { name: 'BRANDON CHIN', role: 'Founder & CEO\nBorneo Referral Group Sdn Bhd\nBorneo Expo 2.0\nCo-Partner, BCG Movement', photo: Brandon, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/brandon-chin-sw/' },
+  { name: 'MUHAMMAD IMRAN KUNA', role: 'Founder, Dream to Aspire\nSenior Para Legal', photo: Imran, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/mohammad-imran-kuna-a2276528/' },
+  { name: 'FARHTHEEBA RAHAT KHAN', role: 'Marketing Partner\nBangladesh', photo: Rahat, flag: '🇧🇩', linkedin: 'http://linkedin.com/in/farhtheeba-rahat-khan-06437414/' },
+  { name: 'DAME DORIA CORDOVA', role: 'Mentor of Global Mentors\nCEO & Co-Founder\nExcellerated Business School\nMoney & You Program, USA', photo: Doria, flag: '🇺🇸', linkedin: 'https://www.linkedin.com/in/dccordova/' },
+  { name: 'GUNTER CONRAD', role: 'Global Mentor - Advisor\nBCG Movement\nFounder, GIGA Trend\nGermany', photo: Gunter, flag: '🇩🇪', linkedin: 'https://www.linkedin.com/in/g%C3%BCnter-conrad-82655067/' },
+  { name: 'KC SEE', role: 'Global Mentor - Advisor\nBCG Movement\nFounder, Quest Learning\nMastery Asia. Malaysia', photo: KcSee, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/kcsee/' },
+  { name: 'WOO HUI QIN', role: 'Program Delivery Lead\nBCG Movement\nFounder, WHQ Learning Hub', photo: Qin, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/woohuiqin/?skipRedirect=true' },
+  { name: 'KONG CHOON YEN', role: 'Founder, Birth Discovery', photo: Yen, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/choon-yen-kong-b5562a311/?skipRedirect=true' },
+  { name: 'DIVESH SONI', role: 'India Lead, BCG Movement\nFounder, Purpose Genie', photo: Soni, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/purposegenie-divesh-soni/' },
+  { name: 'LLEWELLAN VANCE', role: 'Co-Founder\nAsia Innovate Hub\nAI Native Expert', photo: Vance, flag: '🇸🇬', linkedin: 'https://www.linkedin.com/in/llewellan-vance-innovation/' },
+  { name: 'RTN. JENNIFER ISAAC', role: 'Director,\nAuriga Corporate Advisory\nDirector\nCrossAsyst Infotech', photo: Isaac, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/jenniferisaac/' },
+  { name: 'Advocate JANI JERMANS', role: 'Tamil Nadu Chapter President\nAsia Africa Chamber of Commerce', photo: Jani, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/adv-jani-jermans-b-sc-mba-hrm-ll-b-54382837/' },
+  { name: 'DEEPAK SHANKARAPA', role: 'Co-Founder\nBlue Santos Pte Ltd\nBusiness Mentor\nGRC Services', photo: Deepak, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/deepak-reach-grc/' },
+  { name: 'Dr. SHINICHI HAMANO', role: 'Director DACACA\nBusiness Mentor\nFinance and F&B', photo: Hamano, flag: '🇯🇵', linkedin: 'https://www.linkedin.com/in/shinichi-hamano-a809b57/' },
+  { name: 'STEVE SAN', role: 'BCG Movement\nLead - Events\nCo-Founder\nBlue Santos Pte Ltd', photo: Steve, flag: '🇮🇳', linkedin: 'https://www.linkedin.com/in/stevenathanielsan/' },
+  { name: 'Dr. SIVEM DORAIRAJAH', role: 'Founder, Nivahs Global\nGOGLOBAL Mentor\n& Stragetic Partner\nMalaysia', photo: Sivem, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/sivem-dorairajah-icps-8663902a/' },
+  { name: 'GREGG JACLIN', role: 'Managing Director\nExchange Listing LLC, USA\nGOGLOBAL Mentor\nIPO & Investment', photo: Gregg, flag: '🇺🇸', linkedin: 'https://www.linkedin.com/in/gregg-jaclin-a6835b2/' },
+  { name: 'JEIYAN SATHIASEELAN', role: 'Founder, Beezeebee Hub\nCommunity Partner\nMalaysia', photo: Jeiyan, flag: '🇲🇾', linkedin: 'https://www.linkedin.com/in/jeiyan-sathiaseelan-34902479/' }
+];
+
+export const galleryData = [
+  { img: Event1, title: "DC Convention", year: "2012" },
+  { img: Event2, title: "Project Valarchi", year: "2015" },
+  { img: Event3, title: "Leadership Award", year: "2022" },
+  { img: Event4, title: "CEO Money & You", year: "2015" },
+  { img: Event5, title: "Business C-Nergy Event", year: "2025" },
+  { img: Event6, title: "Global Summit", year: "2014" },
+  { img: Event7, title: "IIF Prelude Group Panel", year: "Recent" },
+  { img: Event8, title: "IIF Business Conference", year: "2025" },
+  { img: Event9, title: "Money & You Summit", year: "Past" },
+  { img: Event10, title: "Money & You Showcase", year: "2015" },
+  { img: Event11, title: "Money & You Kuala Lumpur", year: "Past" },
+  { img: Event12, title: "Singapore Expansion", year: "Past" },
+  { img: Event13, title: "Sabah Regional Forum", year: "Recent" },
+  { img: Event14, title: "Sabah Business Convention", year: "2012" },
+  { img: Event15, title: "Utah Mentorship Forum", year: "Past" },
+  { img: Event16, title: "Utah Global Partnership", year: "Past" },
+  { img: Event17, title: "Historic Milestone Retrospective", year: "Various" },
 ];
 
 // Navigation Links
@@ -67,7 +108,7 @@ export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Impact', href: '#impact' },
   { label: 'Mentors', href: '#mentors' },
-  { label: 'FAQ', href: '#faq' },
+  // { label: 'FAQ', href: '#faq' },
   { label: 'Register', href: '#register' },
 ];
 

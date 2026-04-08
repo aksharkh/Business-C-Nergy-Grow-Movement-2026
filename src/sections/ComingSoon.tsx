@@ -195,9 +195,12 @@ const ComingSoon = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 1, ease: 'easeOut' }}
-        className="relative z-20 w-full px-6 py-6 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] font-medium text-slate-500 uppercase gap-4"
+        className="relative z-20 w-full px-6 py-6 md:px-12 md:py-8 flex flex-col md:flex-row justify-between items-center text-[10px] tracking-[0.2em] font-medium text-slate-500 uppercase gap-6"
       >
-        <span>© 2026 Business C-Nergy</span>
+        <div className="flex flex-col items-center md:items-start gap-2">
+          <span>© 2026 Copyright and terms are for BlueSantos</span>
+          <span className="text-[#D4AF37]/80">Designed and developed by BlueSantos</span>
+        </div>
         <div className="flex items-center gap-6">
           <a href="#" className="hover:text-[#6B2D8C] transition-colors duration-300">Privacy</a>
           <a href="#" className="hover:text-[#6B2D8C] transition-colors duration-300">Terms</a>
