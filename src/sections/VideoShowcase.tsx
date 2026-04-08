@@ -45,8 +45,8 @@ const VideoShowcase = () => {
 
   return (
     <section className="py-24 md:py-32 bg-[#11052C] relative overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-[#6B2D8C]/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      {/* Background Glow - Performant Radial Gradient */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] bg-[#6B2D8C]/15 pointer-events-none z-0" style={{ background: 'radial-gradient(circle at center, rgba(107, 45, 140, 0.2), transparent 70%)' }}></div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 relative z-10 text-center">
         <Reveal direction="down" className="mb-16">
@@ -71,6 +71,7 @@ const VideoShowcase = () => {
               muted={isMuted}
               loop
               playsInline
+              preload="metadata"
               poster="/videos/poster.png"
               onClick={togglePlay}
               onTimeUpdate={handleTimeUpdate}

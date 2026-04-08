@@ -24,7 +24,7 @@ const Gallery = () => {
           {loopData.map((item, i) => (
             <div key={i} className="relative w-[280px] lg:w-[400px] h-[200px] lg:h-[280px] shrink-0 mx-3 overflow-hidden rounded-xl cursor-pointer">
               {/* Image */}
-              <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               
               {/* Glassmorphic Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#11052C] via-[#6B2D8C]/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 border border-transparent hover:border-white/20 rounded-xl">
@@ -40,7 +40,7 @@ const Gallery = () => {
         <div className="flex w-max group hover:[animation-play-state:paused] animate-marquee-right">
           {loopData.map((item, i) => (
             <div key={i} className="relative w-[280px] lg:w-[400px] h-[200px] lg:h-[280px] shrink-0 mx-3 overflow-hidden rounded-xl cursor-pointer">
-              <img src={item.img} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
               
               <div className="absolute inset-0 bg-gradient-to-t from-[#11052C] via-[#6B2D8C]/40 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 border border-transparent hover:border-white/20 rounded-xl">
                 <span className="text-[#D4AF37] text-xs lg:text-sm tracking-widest uppercase font-bold mb-1 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">{item.year}</span>

@@ -11,13 +11,10 @@ const Preloader = () => {
     // We want the preloader to show for at least 1.5 seconds so the premium animation is visible
     const minTimePromise = new Promise(resolve => setTimeout(resolve, 1500));
     
-    // Wait for all actual HTML images in the DOM to load
-    const images = Array.from(document.images);
-    
     // Also preload specific heavy assets explicitly
     const criticalAssets = [GroupPhoto, GoGlobal, Logo];
     
-    const assetPromises = [...images.map(img => img.src), ...criticalAssets].map(src => {
+    const assetPromises = criticalAssets.map(src => {
       return new Promise<void>((resolve) => {
         const img = new Image();
         img.src = src;
@@ -62,9 +59,9 @@ const Preloader = () => {
     >
       <div className="relative flex flex-col items-center justify-center pointer-events-auto">
         
-        {/* Glowing floating orbs in background */}
-        <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-[#D4AF37]/10 rounded-full blur-[80px] animate-pulse"></div>
-        <div className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] bg-[#6B2D8C]/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }}></div>
+        {/* Glowing floating orbs in background - Performant Radial Gradients */}
+        <div className="absolute w-[80vw] h-[80vw] md:w-[60vw] md:h-[60vw] pointer-events-none z-0 animate-pulse" style={{ background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.1), transparent 70%)' }}></div>
+        <div className="absolute w-[90vw] h-[90vw] md:w-[70vw] md:h-[70vw] pointer-events-none z-0 animate-pulse" style={{ background: 'radial-gradient(circle at center, rgba(107, 45, 140, 0.15), transparent 70%)', animationDelay: '1s' }}></div>
         
         {/* Title Elements */}
         <div className="relative z-10 flex flex-col items-center">

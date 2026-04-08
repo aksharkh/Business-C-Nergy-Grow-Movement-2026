@@ -7,9 +7,9 @@ import AnimatedCounter from '../components/AnimatedCounter';
 const Hero = () => {
   return (
     <header className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-[#faf5ff]">
-      {/* Background Decor */}
-      <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-[#6B2D8C]/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
-      <div className="absolute bottom-0 left-0 w-[50vw] h-[50vw] bg-[#D4AF37]/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+      {/* Background Decor - Performant Radial Gradients */}
+      <div className="absolute top-0 right-0 w-[80vw] h-[80vw] md:w-[60vw] md:h-[60vw] pointer-events-none z-0" style={{ background: 'radial-gradient(circle at 70% 30%, rgba(107, 45, 140, 0.15), transparent 70%)' }}></div>
+      <div className="absolute bottom-0 left-0 w-[90vw] h-[90vw] md:w-[70vw] md:h-[70vw] pointer-events-none z-0" style={{ background: 'radial-gradient(circle at 30% 70%, rgba(212, 175, 55, 0.1), transparent 70%)' }}></div>
 
       {/* Group Photo Watermark Full Screen Bleed */}
       <div 
