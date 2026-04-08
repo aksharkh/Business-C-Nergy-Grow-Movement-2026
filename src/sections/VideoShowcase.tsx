@@ -82,19 +82,23 @@ const VideoShowcase = () => {
 
             {/* minimalistic Slider */}
             <div 
-              className="absolute bottom-0 left-0 w-full h-1 md:h-1.5 bg-white/10 cursor-pointer z-30 group/slider transition-all hover:h-2 md:hover:h-3"
+              className="absolute bottom-0 left-0 w-full h-8 md:h-1.5 bg-transparent md:bg-white/10 cursor-pointer z-30 group/slider transition-all flex items-end md:items-center py-1 md:py-0"
               onClick={handleSeek}
             >
               <div 
-                className="h-full bg-gradient-to-r from-[#6B2D8C] to-[#D4AF37] relative transition-all duration-100"
-                style={{ width: `${progress}%` }}
+                className="h-1 md:h-full relative transition-all duration-100 w-full group-hover/slider:h-2 md:group-hover/slider:h-3"
               >
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 md:w-4 md:h-4 bg-white rounded-full scale-0 group-hover/slider:scale-100 transition-transform shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+                <div 
+                  className="h-full relative transition-all duration-100"
+                  style={{ width: `${progress}%`, background: 'linear-gradient(to right, #6B2D8C, #D4AF37)' }}
+                >
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 md:w-4 md:h-4 bg-white rounded-full opacity-100 md:opacity-0 group-hover/slider:opacity-100 md:scale-0 group-hover/slider:scale-100 transition-all shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+                </div>
               </div>
             </div>
 
             {/* Premium Controls */}
-            <div className="absolute bottom-6 md:bottom-12 left-6 md:left-12 right-6 md:right-12 z-20 flex justify-between items-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div className="absolute bottom-6 md:bottom-12 left-6 md:left-12 right-6 md:right-12 z-20 flex justify-between items-end opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <div className="flex flex-col items-start">
                 <span className="text-white font-serif italic text-xl md:text-3xl mb-1 md:mb-2 drop-shadow-lg">Experience Malaysia 2026</span>
                 <span className="text-[#D4AF37] text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold drop-shadow-md">The Sabah Chapter</span>
@@ -133,8 +137,8 @@ const VideoShowcase = () => {
           <div className="absolute -bottom-6 -right-6 w-24 h-24 border-b-2 border-r-2 border-[#D4AF37]/30 rounded-br-3xl pointer-events-none hidden md:block"></div>
         </Reveal>
 
-        <Reveal delay={600} className="mt-12 md:mt-16 text-slate-400 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed font-light italic px-4">
-          "Witness the convergence of entrepreneurs, investors, and visionaries shaping the regenerative future of Asia's business ecosystem."
+        <Reveal delay={600} className="mt-12 md:mt-16 max-w-2xl mx-auto text-sm md:text-lg leading-relaxed font-light italic px-4">
+          <span style={{ color: '#94a3b8' }}>"Witness the convergence of entrepreneurs, investors, and visionaries shaping the regenerative future of Asia's business ecosystem."</span>
         </Reveal>
       </div>
     </section>

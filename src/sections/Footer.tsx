@@ -37,17 +37,17 @@ const Footer = () => {
               <Facebook size={18} />
             </a>
           </div>
-          <a href="tel:+6589347277" className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors text-slate-400">
-             <Phone size={14} /> <span className="text-slate-400 hover:text-[#D4AF37] transition-colors">+65 8934 7277 / +60 16341 7511</span>
+          <a href="tel:+6589347277" className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors" style={{ color: '#94a3b8' }}>
+             <Phone size={14} /> <span className="hover:text-[#D4AF37] transition-colors" style={{ color: '#94a3b8' }}>+65 8934 7277 / +60 16341 7511</span>
           </a>
-          <a href="mailto:bizcnergy@shinegoglobal.world" className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors text-slate-400">
-             <Mail size={14} /> <span className="text-slate-400 hover:text-[#D4AF37] transition-colors">bizcnergy@shinegoglobal.world</span>
+          <a href="mailto:bizcnergy@shinegoglobal.world" className="flex items-center gap-2 hover:text-[#D4AF37] transition-colors" style={{ color: '#94a3b8' }}>
+             <Mail size={14} /> <span className="hover:text-[#D4AF37] transition-colors" style={{ color: '#94a3b8' }}>bizcnergy@shinegoglobal.world</span>
           </a>
         </div>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-[10px] uppercase tracking-[0.2em] text-center md:text-left text-slate-500">
+        <p className="text-[10px] uppercase tracking-[0.2em] text-center md:text-left" style={{ color: '#64748b' }}>
           Copyright and terms are for BlueSantos. © 2026
         </p>
         <a href="https://blue-santos.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.2em] text-center md:text-right text-[#D4AF37]/60 hover:text-[#D4AF37] transition-colors cursor-pointer">

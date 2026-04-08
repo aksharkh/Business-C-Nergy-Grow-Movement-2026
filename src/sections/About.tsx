@@ -32,7 +32,7 @@ const About = () => {
           <Reveal delay={200} className="mt-auto">
             <div className="space-y-6">
               {/* GIFT SECTION */}
-              <div className="bg-gradient-to-r from-[#D4AF37]/10 to-[#6B2D8C]/10 p-8 rounded-2xl border border-[#D4AF37]/30 shadow-lg relative overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div className="p-8 rounded-2xl border border-[#D4AF37]/30 shadow-lg relative overflow-hidden hover:shadow-xl transition-all duration-300" style={{ background: 'linear-gradient(to right, rgba(212, 175, 55, 0.1), rgba(107, 45, 140, 0.1))' }}>
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/20 rounded-full blur-3xl"></div>
                 
                 <h3 className="text-xl font-serif text-[#6B2D8C] font-bold mb-4 flex items-center gap-3">
@@ -60,7 +60,7 @@ const About = () => {
               {/* POP-UP CTA */}
               <a href="#register" className="block relative group mt-8">
                 {/* Lavender/Gold glowing pulse */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#D4AF37] via-white to-[#E6E6FA] rounded-2xl blur-md opacity-60 group-hover:opacity-100 transition duration-500 animate-pulse"></div>
+                <div className="absolute -inset-1 rounded-2xl blur-md opacity-60 group-hover:opacity-100 transition duration-500 animate-pulse" style={{ background: 'linear-gradient(to right, #D4AF37, #ffffff, #E6E6FA)' }}></div>
                 
                 {/* Bright, clean button interior */}
                 <div className="relative bg-white/95 backdrop-blur-xl border border-[#D4AF37]/40 p-6 md:p-8 rounded-2xl shadow-xl transform hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300 text-center">

@@ -200,22 +200,22 @@ const Partners = () => {
               </div>
 
               {/* MAIN CENTRAL NODE pushed completely down and shifted LEFT as requested */}
-              <div className="relative z-30 mt-40 lg:mt-48 xl:mt-56 translate-x-6">
+              <div className="relative z-30 mt-40 lg:mt-48 xl:mt-56 translate-x-6 flex flex-col items-center">
+                <SectionLabel title="Supporting Partner" />
+                <div className="flex gap-[40px] lg:gap-[50px] xl:gap-[65px]">
+                  <HexagonCard href="https://sabahtourism.com/">{supportingsabah}</HexagonCard>
+                  <HexagonCard>{visitmalaysia}</HexagonCard>
+                </div>
+              </div>
+
+              {/* Supporting Partner - Exactly down below Business C-Nergy with horizontal drift for layout balance */}
+              <div className="absolute top-[110%] -translate-y-1/2 translate-x-12 lg:translate-x-6 flex flex-col items-center z-40">
                 <Reveal delay={300} direction="up" className="drop-shadow-2xl">
                   <HexagonCard isLarge isDark>
                     <span className="text-[#D4AF37] block mb-2 font-serif">Business</span>
                     <span className="text-white block   px-8 font-serif">C-Nergy</span>
                   </HexagonCard>
                 </Reveal>
-              </div>
-
-              {/* Supporting Partner - Exactly down below Business C-Nergy with horizontal drift for layout balance */}
-              <div className="absolute top-[125%] -translate-y-1/2 translate-x-12 lg:translate-x-6 flex flex-col items-center z-40">
-                <SectionLabel title="Supporting Partner" />
-                <div className="flex gap-[40px] lg:gap-[50px] xl:gap-[65px]">
-                  <HexagonCard href="https://sabahtourism.com/">{supportingsabah}</HexagonCard>
-                  <HexagonCard>{visitmalaysia}</HexagonCard>
-                </div>
               </div>
 
             </div>
@@ -239,12 +239,12 @@ const Partners = () => {
         {/* --- MOBILE STACK LAYOUT (Visible < lg) --- */}
         <div className="lg:hidden flex flex-col items-center gap-16 mt-16 pb-12 w-full">
           
-          <Reveal direction="up" delay={100} className="relative z-30 drop-shadow-2xl pt-2">
-            <SectionLabel title="Main Project" />
-            <HexagonCard isLarge isDark>
-              <span className="text-[#D4AF37] block mb-2 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-bold">Business</span>
-              <span className="text-white block leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">C-Nergy</span>
-            </HexagonCard>
+          <Reveal direction="up" delay={100} className="relative z-30 drop-shadow-2xl pt-2 flex flex-col items-center w-full">
+            <SectionLabel title="Supporting Partner" />
+            <div className="flex justify-center items-center gap-[40px] w-full">
+              <HexagonCard href="https://sabahtourism.com/">{supportingsabah}</HexagonCard>
+              <HexagonCard>{visitmalaysia}</HexagonCard>
+            </div>
           </Reveal>
 
           <div className="flex flex-col sm:flex-row gap-12 sm:gap-8 justify-center w-full">
@@ -265,12 +265,12 @@ const Partners = () => {
             </Reveal>
           </div>
 
-          <Reveal direction="up" delay={500} className="flex flex-col items-center w-full">
-            <SectionLabel title="Supporting Partner" />
-            <div className="flex justify-center items-center gap-[40px] w-full">
-              <HexagonCard href="https://sabahtourism.com/">{sabah}</HexagonCard>
-              <HexagonCard>{visitmalaysia}</HexagonCard>
-            </div>
+          <Reveal direction="up" delay={500} className="flex flex-col items-center w-full relative z-30 drop-shadow-2xl pt-2">
+            <SectionLabel title="Main Project" />
+            <HexagonCard isLarge isDark>
+              <span className="text-[#D4AF37] block mb-2 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-bold">Business</span>
+              <span className="text-white block leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">C-Nergy</span>
+            </HexagonCard>
           </Reveal>
 
           <Reveal direction="up" delay={550} className="flex flex-col items-center w-full">

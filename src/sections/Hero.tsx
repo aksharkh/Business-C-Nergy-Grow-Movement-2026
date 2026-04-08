@@ -92,7 +92,7 @@ const Hero = () => {
             {/* First Card - Top Left */}
             <div className="absolute top-[5%] left-[0%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 animate-float z-10 block">
               <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
-                <AnimatedCounter value={50} suffix="+" delay={2500} />
+                <AnimatedCounter value={50} suffix="+" delay={3000} />
               </div>
               <div className="text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
                 Global<br/>Mentors
@@ -102,7 +102,7 @@ const Hero = () => {
             {/* Second Card - Middle Right */}
             <div className="absolute top-[28%] right-[0%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 animate-float-reverse z-10 block" style={{ animationDelay: '0.5s' }}>
               <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
-                <AnimatedCounter value={20} suffix="+" delay={2700} />
+                <AnimatedCounter value={20} suffix="+" delay={3200} />
               </div>
               <div className="text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
                 Countries<br/>(Leaders)
@@ -112,7 +112,7 @@ const Hero = () => {
             {/* Third Card - Lower Left */}
             <div className="absolute top-[55%] left-[5%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 animate-float z-10 block" style={{ animationDelay: '1s' }}>
               <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
-                <AnimatedCounter value={10} suffix="+" delay={2900} />
+                <AnimatedCounter value={10} suffix="+" delay={3400} />
               </div>
               <div className="text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
                 Countries<br/>(Investors)
@@ -122,7 +122,7 @@ const Hero = () => {
             {/* Fourth Card - Bottom Right */}
             <div className="absolute top-[78%] right-[5%] group p-6 rounded-2xl bg-white/30 backdrop-blur-sm border border-white/40 hover:bg-white/50 transition-all w-48 hover:shadow-xl hover:shadow-purple-500/30 hover:scale-105 animate-float-reverse z-10 block" style={{ animationDelay: '1.5s' }}>
               <div className="text-4xl font-serif text-[#2D1B3D] mb-2 group-hover:text-[#6B2D8C] transition-colors duration-300">
-                <AnimatedCounter value={10000} suffix="+" delay={3100} />
+                <AnimatedCounter value={10000} suffix="+" delay={3600} />
               </div>
               <div className="text-[10px] sm:text-xs text-slate-800 uppercase tracking-widest transition-colors font-bold">
                 Hours Learning<br/>Experience

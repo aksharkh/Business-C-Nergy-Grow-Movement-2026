@@ -11,10 +11,14 @@ const Preloader = () => {
     // We want the preloader to show for at least 1.5 seconds so the premium animation is visible
     const minTimePromise = new Promise(resolve => setTimeout(resolve, 1500));
     
+    // Wait for all actual HTML images in the DOM to load
+    const images = Array.from(document.images);
+    
     // Also preload specific heavy assets explicitly
     const criticalAssets = [GroupPhoto, GoGlobal, Logo];
     
-    const assetPromises = criticalAssets.map(src => {
+    // Combine explicit heavy assets and dynamically discovered images
+    const assetPromises = [...criticalAssets, ...images.map(img => img.src)].map(src => {
       return new Promise<void>((resolve) => {
         const img = new Image();
         img.src = src;
