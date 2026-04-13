@@ -8,7 +8,7 @@ import workless from '../assets/companyLogos/workless.png';
 import whq from '../assets/companyLogos/whq.png';
 import dewi from '../assets/companyLogos/dewi.png';
 import birth from '../assets/companyLogos/birth.png';
-import reach from '../assets/companyLogos/reach.png';
+import reachgrc from '../assets/companyLogos/reachgrc.png';
 import globe from '../assets/companyLogos/globe.png';
 import quest from '../assets/companyLogos/quest.png';
 import innovate from '../assets/companyLogos/innovate.png';
@@ -39,7 +39,8 @@ import supportingsabah from '../assets/companyLogos/supportingsabah.svg';
 
 
 
-const logos = [borneo, workless, whq, dewi, birth, reach, globe,quest,innovate,purpose,incubaker,auriga,belivin,beez,doctors,nivahs,insan,creative,sj,navaties,cosmo,lash,icib,asianchamber,sabah,institute,globalsparks,kon,ssacci];
+
+const logos = [borneo, workless, whq, dewi, birth, reachgrc, globe,quest,innovate,purpose,incubaker,auriga,belivin,beez,doctors,nivahs,insan,creative,sj,navaties,cosmo,lash,icib,asianchamber,sabah,institute,globalsparks,kon,ssacci];
 
 const partnersLists = {
   jointlyPresented: logos.slice(0, 2),
