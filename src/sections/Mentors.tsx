@@ -20,8 +20,12 @@ const MentorCard = ({ mentor }: { mentor: any }) => (
       <div className="absolute inset-0 bg-gradient-to-tr from-[#6B2D8C]/40 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
     </div>
 
-    <div className="absolute top-[0px] md:top-[10px] right-[30px] md:right-[25px] w-6 h-6 md:w-10 md:h-10 rounded-full bg-white shadow-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-2 md:group-hover:translate-x-2 md:group-hover:rotate-12 transition-all duration-500 z-20 flex items-center justify-center text-sm md:text-2xl overflow-hidden border border-slate-100 pointer-events-none">
-      {mentor.flag}
+    <div className="absolute top-[0px] md:top-[10px] right-[30px] md:right-[25px] w-6 h-6 md:w-10 md:h-10 rounded-full bg-gray-200 shadow-lg opacity-100 md:opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-2 md:group-hover:translate-x-2 md:group-hover:rotate-12 transition-all duration-500 z-20 flex items-center justify-center overflow-hidden border border-slate-100 pointer-events-none p-1">
+      <img 
+        src={`https://flagcdn.com/w40/${mentor.flag.toLowerCase()}.png`} 
+        alt={`${mentor.flag} flag`}
+        className="w-full h-full object-contain rounded-sm"
+      />
     </div>
 
     <div className="mt-4 md:mt-8 ml-[25px] md:ml-[40px] pl-3 md:pl-6 relative z-10 pointer-events-none">                  

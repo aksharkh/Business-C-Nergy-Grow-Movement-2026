@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import GroupPhoto from '../assets/groupphoto.jpeg';
 import GoGlobal from '../assets/goglobal.png';
 import Logo from '../assets/companyLogos/logo.jpeg';
+import BlueSantosLogo from '../assets/companyLogos/Blue_Santos.png';
 
 const Preloader = () => {
   const [loading, setLoading] = useState(true);
@@ -90,10 +91,18 @@ const Preloader = () => {
         </div>
 
         {/* Developer Attribution */}
-        <div className="absolute -bottom-24 md:-bottom-32 text-center w-full">
-          <p className="text-white/30 hover:text-white/60 transition-colors font-sans text-[8px] md:text-[10px] uppercase tracking-[0.3em]">
-            Designed and developed by BlueSantos
+        <div className="absolute -bottom-24 md:-bottom-32 text-center w-full flex flex-col items-center gap-2">
+          <p className="text-white/30 font-sans text-[10px] uppercase tracking-[0.3em]">
+            Designed and developed by
           </p>
+          <a href="https://blue-santos.vercel.app/" target="_blank" rel="noopener noreferrer" className="opacity-40 hover:opacity-80 transition-opacity">
+            <img 
+              src={BlueSantosLogo} 
+              alt="Blue Santos Technologies" 
+              className="h-6 md:h-10 w-auto" 
+              style={{ filter: 'brightness(0) invert(1)' }}
+            />
+          </a>
         </div>
 
       </div>

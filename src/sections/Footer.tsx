@@ -1,5 +1,6 @@
 import logo from '../assets/companyLogos/logo.jpeg';
 import { Linkedin, Facebook, Phone, Mail } from 'lucide-react';
+import BlueSantosLogo from '../assets/companyLogos/Blue_Santos.png';
 
 
 const Footer = () => {
@@ -47,11 +48,19 @@ const Footer = () => {
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p className="text-[10px] uppercase tracking-[0.2em] text-center md:text-left text-slate-500">
+          Copyright and terms are for Shinegoglobal. © 2026
         <p className="text-[10px] uppercase tracking-[0.2em] text-center md:text-left" style={{ color: '#64748b' }}>
           Copyright and terms are for BlueSantos. © 2026
         </p>
-        <a href="https://blue-santos.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.2em] text-center md:text-right text-[#D4AF37]/60 hover:text-[#D4AF37] transition-colors cursor-pointer">
-          Designed and developed by BlueSantos
+        <a href="https://blue-santos.vercel.app/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+          <span className="text-[10px] uppercase tracking-[0.2em]" style={{ color: '#D4AF37' }}>Designed & Developed by</span>
+          <img
+            src={BlueSantosLogo}
+            alt="Blue Santos Technologies"
+            className="h-6 md:h-8 w-auto"
+            style={{ filter: 'brightness(0) invert(1)' }}
+          />
         </a>
       </div>
 
