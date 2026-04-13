@@ -75,9 +75,9 @@ export const mentorsData = [
   { name: 'LLEWELLAN VANCE', role: 'Co-Founder\nAsia Innovate Hub\nAI Native Expert', photo: Vance, flag: 'SG', linkedin: 'https://www.linkedin.com/in/llewellan-vance-innovation/' },
   { name: 'RTN. JENNIFER ISAAC', role: 'Director,\nAuriga Corporate Advisory\nDirector\nCrossAsyst Infotech', photo: Isaac, flag: 'IN', linkedin: 'https://www.linkedin.com/in/jenniferisaac/' },
   { name: 'Advocate JANI JERMANS', role: 'Tamil Nadu Chapter President\nAsia Africa Chamber of Commerce', photo: Jani, flag: 'IN', linkedin: 'https://www.linkedin.com/in/adv-jani-jermans-b-sc-mba-hrm-ll-b-54382837/' },
-  { name: 'DEEPAK SHANKARAPA', role: 'Co-Founder\nBlue Santos Pte Ltd\nBusiness Mentor\nGRC Services', photo: Deepak, flag: 'IN', linkedin: 'https://www.linkedin.com/in/deepak-reach-grc/' },
+  { name: 'DEEPAK SHANKARAPA', role: 'Co-Founder\nBlue Santos Pvt Ltd\nBusiness Mentor\nGRC Services', photo: Deepak, flag: 'IN', linkedin: 'https://www.linkedin.com/in/deepak-reach-grc/' },
   { name: 'Dr. SHINICHI HAMANO', role: 'Director DACACA\nBusiness Mentor\nFinance and F&B', photo: Hamano, flag: 'JP', linkedin: 'https://www.linkedin.com/in/shinichi-hamano-a809b57/' },
-  { name: 'STEVE SAN', role: 'BCG Movement\nLead - Events\nCo-Founder\nBlue Santos Pte Ltd', photo: Steve, flag: 'IN', linkedin: 'https://www.linkedin.com/in/stevenathanielsan/' },
+  { name: 'STEVE NATHANIEL SAN', role: 'BCG Movement\nLead - Events\nCo-Founder\nBlue Santos Pvt Ltd', photo: Steve, flag: 'IN', linkedin: 'https://www.linkedin.com/in/stevenathanielsan/' },
   { name: 'Dr. SIVEM DORAIRAJAH', role: 'Founder, Nivahs Global\nGOGLOBAL Mentor\n& Stragetic Partner\nMalaysia', photo: Sivem, flag: 'MY', linkedin: 'https://www.linkedin.com/in/sivem-dorairajah-icps-8663902a/' },
   { name: 'GREGG JACLIN', role: 'Managing Director\nExchange Listing LLC, USA\nGOGLOBAL Mentor\nIPO & Investment', photo: Gregg, flag: 'US', linkedin: 'https://www.linkedin.com/in/gregg-jaclin-a6835b2/' },
   { name: 'JEIYAN SATHIASEELAN', role: 'Founder, Beezeebee Hub\nCommunity Partner\nMalaysia', photo: Jeiyan, flag: 'MY', linkedin: 'https://www.linkedin.com/in/jeiyan-sathiaseelan-34902479/' }
