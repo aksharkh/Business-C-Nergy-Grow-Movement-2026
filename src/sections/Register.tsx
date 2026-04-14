@@ -16,7 +16,10 @@ const Register = () => {
     referral: '',
     readiness: [] as string[],
     consent: false,
+    website: '', // Honeypot field for bot protection
   });
+  
+  const [startTime] = useState(Date.now()); // Record when the user arrived at the section
 
   const [notification, setNotification] = useState<{
     type: NotificationType;
@@ -75,6 +78,23 @@ const Register = () => {
       return;
     }
 
+    // --- ANTI-BOT PROTECTION ---
+    // 1. Honeypot check: Bots fill in all fields, including hidden ones.
+    if (formData.website) {
+      console.warn('Bot submission blocked via honeypot.');
+      // Silently succeed to fool the bot into thinking it worked
+      setNotification({ type: 'success', message: 'Thank you for registering!' });
+      return;
+    }
+
+    // 2. Submission speed check: Bots submit too fast (less than 3 seconds).
+    const timeSpent = (Date.now() - startTime) / 1000;
+    if (timeSpent < 3) {
+      console.warn('Bot submission blocked via timing check.');
+      setNotification({ type: 'success', message: 'Thank you for registering!' });
+      return;
+    }
+
     setIsLoading(true);
     setNotification({ type: 'loading', message: 'Submitting your registration...' });
 
@@ -124,6 +144,7 @@ const Register = () => {
         referral: '',
         readiness: [],
         consent: false,
+        website: '',
       });
       
       // Close notification after 5 seconds
@@ -415,6 +436,19 @@ const Register = () => {
                 <label htmlFor="consent" className="text-white text-sm cursor-pointer">
                   I agree and accept that All information gathered by GOGLOBAL Business School & Work Less Earn More Academy, is maintained in accordance to the the PDPA laws of Singapore, and shared ONLY to the SHINE GOGLOBAL & Its related company to serve the purpose of this movement, sharing the relevant information needed for my business and personal growth
                 </label>
+              </div>
+
+              {/* Honeypot field - Keep hidden from real users */}
+              <div style={{ display: 'none' }} aria-hidden="true">
+                <input
+                  type="text"
+                  name="website"
+                  value={formData.website}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  placeholder="Your website"
+                />
               </div>
 
               {/* Submit Button */}
