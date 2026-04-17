@@ -39,17 +39,21 @@ const MentorCard = ({ mentor }: { mentor: any }) => (
   </a>
 );
 
-const firstRow = mentorsData.slice(0, 11);
-const secondRow = mentorsData.slice(11);
+const row1 = mentorsData.slice(0, 7);
+const row2 = mentorsData.slice(7, 14);
+const row3 = mentorsData.slice(14, 21);
 
-// One unified block containing exactly both rows so they scroll flawlessly together
+// One unified block containing exactly the rows so they scroll flawlessly together
 const MentorsBlock = forwardRef<HTMLDivElement, {}>((_, ref) => (
   <div ref={ref} className="flex flex-col gap-6 md:gap-12 w-max shrink-0">
     <div className="flex gap-4 md:gap-12">
-      {firstRow.map((m, i) => <MentorCard key={`r1-${i}`} mentor={m} />)}
+      {row1.map((m, i) => <MentorCard key={`r1-${i}`} mentor={m} />)}
     </div>
-    <div className="flex gap-4 md:gap-12 ml-[30px] md:ml-[140px]">
-      {secondRow.map((m, i) => <MentorCard key={`r2-${i}`} mentor={m} />)}
+    <div className="flex gap-4 md:gap-12">
+      {row2.map((m, i) => <MentorCard key={`r2-${i}`} mentor={m} />)}
+    </div>
+    <div className="flex gap-4 md:gap-12">
+      {row3.map((m, i) => <MentorCard key={`r3-${i}`} mentor={m} />)}
     </div>
   </div>
 ));
